@@ -1,40 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Naveen Prasad Kuniyil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naveen Prasad Kuniyil</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+.header {
+    background:#0b3d91;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.header h1 {
+    margin:0;
+    font-size:36px;
+}
+
+.header p {
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container {
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* CARD */
+.card {
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+@media(max-width:768px){
+    .grid {
+        grid-template-columns:1fr;
+    }
+}
+
+/* BUTTON */
+.btn {
+    display:inline-block;
+    background:#0b3d91;
+    color:white;
+    padding:10px 15px;
+    border-radius:5px;
+    text-decoration:none;
+    margin-top:10px;
+}
+</style>
+
 </head>
-<body style="font-family: Arial; max-width: 900px; margin: auto; padding:20px;">
 
-<h1>Naveen Prasad Kuniyil</h1>
-<p><b>IT Manager | IT Consultant | Cybersecurity Specialist</b></p>
+<body>
 
-<hr>
+<!-- HEADER -->
+<div class="header">
+    <h1>Naveen Prasad Kuniyil</h1>
+    <p>IT Manager | Cybersecurity & Infrastructure Consultant</p>
+    <p>Helping businesses secure and optimize IT systems</p>
+</div>
 
-<h2>About Me</h2>
-<p>
-IT professional with 20+ years of experience in infrastructure, security, and enterprise systems.
-Currently working in Qatar and providing IT consulting services across multiple industries.
-</p>
+<!-- CONTENT -->
+<div class="container">
 
-<h2>Core Expertise</h2>
-<ul>
-<li>Palo Alto, SonicWall, CheckPoint Firewalls</li>
-<li>Windows Server, Virtualization, Backup Solutions</li>
-<li>Network Design & Multi-Branch Infrastructure</li>
-<li>Healthcare IT Systems</li>
-</ul>
+    <!-- ABOUT -->
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+        IT professional with 20+ years of experience in infrastructure, security, and enterprise systems.
+        Currently working in Qatar and providing consulting services across healthcare, finance, and SMB sectors.
+        </p>
+    </div>
 
-<h2>Services</h2>
-<ul>
-<li>IT Infrastructure Setup & Optimization</li>
-<li>Cybersecurity Implementation</li>
-<li>Remote IT Support</li>
-<li>Consulting for SMBs</li>
-</ul>
+    <!-- SERVICES -->
+    <div class="card">
+        <h2>Services</h2>
+        <div class="grid">
+            <div>
+                <h3>Network Security</h3>
+                <p>Palo Alto, SonicWall, CheckPoint firewall deployment and optimization.</p>
+            </div>
+            <div>
+                <h3>IT Infrastructure</h3>
+                <p>Design and implementation of multi-branch enterprise networks.</p>
+            </div>
+            <div>
+                <h3>Server & Virtualization</h3>
+                <p>Windows Server, Hyper-V, backup and disaster recovery solutions.</p>
+            </div>
+            <div>
+                <h3>Remote IT Support</h3>
+                <p>Managed IT services for SMBs across GCC, Europe and US.</p>
+            </div>
+        </div>
+    </div>
 
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
+    <!-- EXPERIENCE -->
+    <div class="card">
+        <h2>Experience</h2>
+        <ul>
+            <li>20+ years in IT Infrastructure & Security</li>
+            <li>IT Manager – Healthcare sector (Qatar)</li>
+            <li>30+ IT consulting projects completed</li>
+            <li>Multi-branch network design & implementation</li>
+        </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="card">
+        <h2>Key Projects</h2>
+        <ul>
+            <li>Secure VPN deployment using Palo Alto GlobalProtect</li>
+            <li>Hospital infrastructure redesign across multiple branches</li>
+            <li>Backup & disaster recovery implementation (Backup Exec)</li>
+            <li>Firewall and endpoint security optimization</li>
+        </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: your@email.com</p>
+        <a href="mailto:your@email.com" class="btn">Contact Me</a>
+    </div>
+
+</div>
 
 </body>
 </html>

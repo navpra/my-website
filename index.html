@@ -7,26 +7,60 @@
 <style>
 body {
     margin:0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background:#f4f6f9;
+    scroll-behavior:smooth;
 }
 
-/* HEADER */
-.header {
+/* NAVBAR */
+.navbar {
+    position:sticky;
+    top:0;
     background:#0b3d91;
-    color:white;
-    padding:60px 20px;
+    padding:15px;
     text-align:center;
+    z-index:1000;
 }
 
-.header h1 {
-    margin:0;
-    font-size:36px;
+.navbar a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:500;
 }
 
-.header p {
-    font-size:18px;
+/* HERO */
+.hero {
+    background:linear-gradient(135deg,#0b3d91,#1e5bd8);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero img {
+    width:120px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.hero h1 {
+    margin:10px 0;
+}
+
+.hero p {
     opacity:0.9;
+}
+
+/* BUTTON */
+.btn {
+    display:inline-block;
+    background:white;
+    color:#0b3d91;
+    padding:10px 15px;
+    border-radius:6px;
+    text-decoration:none;
+    margin:10px 5px;
+    font-weight:bold;
 }
 
 /* CONTAINER */
@@ -39,10 +73,10 @@ body {
 /* CARD */
 .card {
     background:white;
-    padding:20px;
+    padding:25px;
     margin-bottom:20px;
     border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* GRID */
@@ -58,15 +92,12 @@ body {
     }
 }
 
-/* BUTTON */
-.btn {
-    display:inline-block;
+/* FOOTER */
+.footer {
+    text-align:center;
+    padding:20px;
     background:#0b3d91;
     color:white;
-    padding:10px 15px;
-    border-radius:5px;
-    text-decoration:none;
-    margin-top:10px;
 }
 </style>
 
@@ -74,77 +105,84 @@ body {
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="https://via.placeholder.com/120" alt="Profile">
     <h1>Naveen Prasad Kuniyil</h1>
     <p>IT Manager | Cybersecurity & Infrastructure Consultant</p>
-    <p>Helping businesses secure and optimize IT systems</p>
+    <p>Helping businesses secure, optimize, and scale IT systems</p>
+
+    <a href="mailto:your@email.com" class="btn">Email Me</a>
+    <a href="https://wa.me/yournumber" class="btn">WhatsApp</a>
+    <a href="https://linkedin.com/in/yourprofile" class="btn">LinkedIn</a>
 </div>
 
 <!-- CONTENT -->
 <div class="container">
 
     <!-- ABOUT -->
-    <div class="card">
+    <div class="card" id="about">
         <h2>About Me</h2>
         <p>
-        IT professional with 20+ years of experience in infrastructure, security, and enterprise systems.
-        Currently working in Qatar and providing consulting services across healthcare, finance, and SMB sectors.
+        IT professional with 20+ years of experience in infrastructure, cybersecurity, and enterprise systems.
+        Specialized in designing secure, scalable IT environments for healthcare and SMB sectors.
         </p>
     </div>
 
     <!-- SERVICES -->
-    <div class="card">
+    <div class="card" id="services">
         <h2>Services</h2>
         <div class="grid">
             <div>
                 <h3>Network Security</h3>
-                <p>Palo Alto, SonicWall, CheckPoint firewall deployment and optimization.</p>
+                <p>Palo Alto, SonicWall, CheckPoint deployment and optimization.</p>
             </div>
             <div>
                 <h3>IT Infrastructure</h3>
-                <p>Design and implementation of multi-branch enterprise networks.</p>
+                <p>Multi-branch network design and implementation.</p>
             </div>
             <div>
                 <h3>Server & Virtualization</h3>
-                <p>Windows Server, Hyper-V, backup and disaster recovery solutions.</p>
+                <p>Windows Server, Hyper-V, backup & DR solutions.</p>
             </div>
             <div>
                 <h3>Remote IT Support</h3>
-                <p>Managed IT services for SMBs across GCC, Europe and US.</p>
+                <p>Managed IT services for global SMB clients.</p>
             </div>
         </div>
     </div>
 
-    <!-- EXPERIENCE -->
-    <div class="card">
-        <h2>Experience</h2>
-        <ul>
-            <li>20+ years in IT Infrastructure & Security</li>
-            <li>IT Manager – Healthcare sector (Qatar)</li>
-            <li>30+ IT consulting projects completed</li>
-            <li>Multi-branch network design & implementation</li>
-        </ul>
-    </div>
-
     <!-- PROJECTS -->
-    <div class="card">
+    <div class="card" id="projects">
         <h2>Key Projects</h2>
         <ul>
-            <li>Secure VPN deployment using Palo Alto GlobalProtect</li>
-            <li>Hospital infrastructure redesign across multiple branches</li>
-            <li>Backup & disaster recovery implementation (Backup Exec)</li>
-            <li>Firewall and endpoint security optimization</li>
+            <li>GlobalProtect VPN implementation using Palo Alto</li>
+            <li>Healthcare multi-branch IT infrastructure redesign</li>
+            <li>Backup Exec disaster recovery setup</li>
+            <li>Enterprise firewall and endpoint security deployment</li>
         </ul>
     </div>
 
     <!-- CONTACT -->
-    <div class="card">
+    <div class="card" id="contact">
         <h2>Contact</h2>
         <p>Email: your@email.com</p>
-        <a href="mailto:your@email.com" class="btn">Contact Me</a>
+        <p>Location: Doha, Qatar</p>
     </div>
 
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Naveen Prasad Kuniyil | IT Consultant
 </div>
 
 </body>

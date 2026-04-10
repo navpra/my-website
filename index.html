@@ -2,14 +2,13 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Naveen Prasad Kuniyil</title>
+<title>Naveen Prasad Kuniyil | IT Consultant</title>
 
 <style>
 body {
     margin:0;
     font-family: 'Segoe UI', sans-serif;
     background:#f4f6f9;
-    scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -19,7 +18,6 @@ body {
     background:#0b3d91;
     padding:15px;
     text-align:center;
-    z-index:1000;
 }
 
 .navbar a {
@@ -44,15 +42,6 @@ body {
     border-radius:50%;
     border:4px solid white;
     box-shadow:0 4px 12px rgba(0,0,0,0.2);
-    margin-bottom:15px;
-}
-
-.hero h1 {
-    margin:10px 0;
-}
-
-.hero p {
-    opacity:0.9;
 }
 
 /* BUTTON */
@@ -79,8 +68,13 @@ body {
     background:white;
     padding:25px;
     margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
 }
 
 /* GRID */
@@ -112,6 +106,7 @@ body {
 <!-- NAVBAR -->
 <div class="navbar">
     <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -121,12 +116,12 @@ body {
 <div class="hero">
     <img src="profile.jpg" alt="Profile">
     <h1>Naveen Prasad Kuniyil</h1>
-    <p>IT Manager | Cybersecurity & Infrastructure Consultant</p>
-    <p>Helping businesses secure, optimize, and scale IT systems</p>
+    <p><b>IT Infrastructure & Cybersecurity Consultant</b></p>
+    <p>Helping businesses secure networks, optimize systems, and prevent downtime</p>
 
-    <a href="mailto:nav_pra@outlook.com" class="btn">Email Me</a>
-    <a href="https://wa.me/+974 33990879" class="btn">WhatsApp</a>
-    <a href="https://linkedin.com/in/naveen-prasad-kuniyil-5967874" class="btn">LinkedIn</a>
+    <a href="mailto:naveenprasad.naveen@gmail.com" class="btn">Email Me</a>
+    <a href="https://wa.me/974XXXXXXXX" class="btn">WhatsApp</a>
+    <a href="https://linkedin.com/in/naveen-prasad-5967874" class="btn">LinkedIn</a>
 </div>
 
 <!-- CONTENT -->
@@ -136,9 +131,29 @@ body {
     <div class="card" id="about">
         <h2>About Me</h2>
         <p>
-        IT professional with 20+ years of experience in infrastructure, cybersecurity, and enterprise systems.
-        Specialized in designing secure, scalable IT environments for healthcare and SMB sectors.
+        Seasoned IT leader with over 20 years of experience, including 15+ years in international healthcare IT management. 
+        Currently serving as IT Manager at Al-Hayat Medical Center Group, Doha.
         </p>
+    </div>
+
+    <!-- EXPERTISE -->
+    <div class="card" id="expertise">
+        <h2>Professional Expertise</h2>
+        <p>
+        Proven track record in digital transformation, cybersecurity, and enterprise infrastructure design across healthcare and SMB sectors.
+        Successfully led multi-branch IT deployments, compliance initiatives, and secure infrastructure implementations.
+        </p>
+    </div>
+
+    <!-- HEALTHCARE -->
+    <div class="card">
+        <h2>Healthcare IT Expertise</h2>
+        <ul>
+            <li>Hospital Management System (HMS) deployment across multiple branches</li>
+            <li>JCI accreditation support and compliance</li>
+            <li>Integration with national healthcare systems (eHealth, Insurance)</li>
+            <li>Secure patient data and infrastructure management</li>
+        </ul>
     </div>
 
     <!-- SERVICES -->
@@ -147,19 +162,19 @@ body {
         <div class="grid">
             <div>
                 <h3>Network Security</h3>
-                <p>Palo Alto, SonicWall, CheckPoint deployment and optimization.</p>
+                <p>Palo Alto, SonicWall, CheckPoint firewall implementation.</p>
             </div>
             <div>
                 <h3>IT Infrastructure</h3>
-                <p>Multi-branch network design and implementation.</p>
+                <p>Design and deployment of multi-branch enterprise networks.</p>
             </div>
             <div>
-                <h3>Server & Virtualization</h3>
-                <p>Windows Server, Hyper-V, backup & DR solutions.</p>
+                <h3>Cloud & Virtualization</h3>
+                <p>Microsoft 365, Azure, Hyper-V, backup and disaster recovery.</p>
             </div>
             <div>
-                <h3>Remote IT Support</h3>
-                <p>Managed IT services for global SMB clients.</p>
+                <h3>IT Consulting</h3>
+                <p>Strategic consulting for SMBs across GCC, Europe and US.</p>
             </div>
         </div>
     </div>
@@ -169,20 +184,46 @@ body {
         <h2>Key Projects</h2>
         <ul>
             <li>GlobalProtect VPN implementation using Palo Alto</li>
-            <li>Healthcare multi-branch IT infrastructure redesign</li>
-            <li>Backup Exec disaster recovery setup</li>
-            <li>Enterprise firewall and endpoint security deployment</li>
+            <li>Healthcare infrastructure redesign across multiple branches</li>
+            <li>Enterprise backup and disaster recovery implementation</li>
+            <li>Firewall and endpoint security optimization</li>
+        </ul>
+    </div>
+
+    <!-- TRUST -->
+    <div class="card">
+        <h2>Why Choose Me</h2>
+        <ul>
+            <li>20+ years of proven IT experience</li>
+            <li>30+ successful consulting projects</li>
+            <li>Expert in healthcare and enterprise IT environments</li>
+            <li>Strong focus on security, reliability, and scalability</li>
         </ul>
     </div>
 
     <!-- CONTACT -->
     <div class="card" id="contact">
         <h2>Contact</h2>
-        <p>Email: nav_pra@outlook.com</p>
-        <p>Location: Doha, Qatar</p>
+        <p><b>Email:</b> naveenprasad.naveen@gmail.com</p>
+        <p><b>Location:</b> Doha, Qatar</p>
+        <p><b>Availability:</b> Remote & On-site Consulting</p>
     </div>
 
 </div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/974 33990879" target="_blank" style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+">💬</a>
 
 <!-- FOOTER -->
 <div class="footer">

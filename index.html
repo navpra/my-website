@@ -41,7 +41,6 @@ body {
     object-fit:cover;
     border-radius:50%;
     border:4px solid white;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* BUTTON */
@@ -70,11 +69,6 @@ body {
     margin-bottom:20px;
     border-radius:12px;
     box-shadow:0 6px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-5px);
 }
 
 /* GRID */
@@ -90,7 +84,23 @@ body {
     }
 }
 
-/* FOOTER */
+/* FORM */
+input, textarea {
+    width:100%;
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button {
+    background:#0b3d91;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
 .footer {
     text-align:center;
     padding:20px;
@@ -98,12 +108,10 @@ body {
     color:white;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
@@ -112,7 +120,6 @@ body {
     <a href="#contact">Contact</a>
 </div>
 
-<!-- HERO -->
 <div class="hero">
     <img src="profile.jpg" alt="Profile">
     <h1>Naveen Prasad Kuniyil</h1>
@@ -120,139 +127,86 @@ body {
     <p>Helping businesses secure networks, optimize systems, and prevent downtime</p>
 
     <a href="mailto:nav_pra@outlook.com" class="btn">Email Me</a>
-    <a href="https://wa.me/974 33990879" class="btn">WhatsApp</a>
+    <a href="https://wa.me/97433990879" class="btn">WhatsApp</a>
     <a href="https://linkedin.com/in/naveen-prasad-5967874" class="btn">LinkedIn</a>
 </div>
 
-<!-- CONTENT -->
 <div class="container">
 
-    <!-- ABOUT -->
-    <div class="card" id="about">
-        <h2>About Me</h2>
-        <p>
-        Seasoned IT leader with over 23 years of experience, including 16+ years in international IT management. 
-        Currently serving as IT Manager at Al-Hayat Group, Doha.
-        </p>
-    </div>
+<div class="card" id="about">
+<h2>About Me</h2>
+<p>Seasoned IT leader with 23+ years of experience including 16+ years in international IT management.</p>
+</div>
 
-    <!-- EXPERTISE -->
-    <div class="card" id="expertise">
-        <h2>Professional Expertise</h2>
-        <p>
-        Proven track record in digital transformation, cybersecurity, and enterprise infrastructure design across healthcare and SMB sectors.
-        Successfully led multi-branch IT deployments, compliance initiatives, and secure infrastructure implementations.
-        </p>
-    </div>
+<div class="card" id="expertise">
+<h2>Professional Expertise</h2>
+<p>Cybersecurity, enterprise infrastructure, healthcare IT, and multi-branch deployments.</p>
+</div>
 
-    <!-- HEALTHCARE -->
-    <div class="card">
-        <h2>Healthcare IT Expertise</h2>
-        <ul>
-            <li>Hospital Management System (HMS) deployment across multiple branches</li>
-            <li>JCI accreditation support and compliance</li>
-            <li>Integration with National Healthcare Systems (eHealth, Insurance)</li>
-            <li>Secure patient data and infrastructure management</li>
-        </ul>
-    </div>
+<div class="card" id="services">
+<h2>Services</h2>
+<div class="grid">
+<div><h3>Network Security</h3></div>
+<div><h3>IT Infrastructure</h3></div>
+<div><h3>Cloud Solutions</h3></div>
+<div><h3>Consulting</h3></div>
+</div>
+</div>
 
-    <!-- SERVICES -->
-    <div class="card" id="services">
-        <h2>Services</h2>
-        <div class="grid">
-            <div>
-                <h3>Network Security</h3>
-                <p>Palo Alto, Fortinet, Cisco, CheckPoint, SonicWall, Sophos firewall implementation.</p>
-            </div>
-            <div>
-                <h3>IT Infrastructure</h3>
-                <p>Design and deployment of multi-branch enterprise networks.</p>
-            </div>
-            <div>
-                <h3>Cloud & Virtualization</h3>
-                <p>Microsoft 365, Azure, Hyper-V, backup and disaster recovery.</p>
-            </div>
-            <div>
-                <h3>IT Consulting</h3>
-                <p>Strategic consulting for SMBs across GCC, Europe and US.</p>
-            </div>
-        </div>
-    </div>
+<div class="card" id="projects">
+<h2>Key Projects</h2>
+<ul>
+<li>GlobalProtect VPN</li>
+<li>Healthcare infrastructure</li>
+<li>Backup & DR</li>
+<li>Firewall optimization</li>
+</ul>
+</div>
 
-    <!-- PROJECTS -->
-    <div class="card" id="projects">
-        <h2>Key Projects</h2>
-        <ul>
-            <li>GlobalProtect VPN implementation using Palo Alto</li>
-            <li>Healthcare infrastructure redesign across multiple branches</li>
-            <li>Enterprise backup and disaster recovery implementation</li>
-            <li>Firewall and endpoint security optimization</li>
-        </ul>
-    </div>
+<div class="card" id="contact">
+<h2>Contact</h2>
 
-    <!-- TRUST -->
-    <div class="card">
-        <h2>Why Choose Me</h2>
-        <ul>
-            <li>23+ years of proven IT experience</li>
-            <li>30+ successful consulting projects</li>
-            <li>Expert in healthcare and enterprise IT environments</li>
-            <li>Strong focus on security, reliability, and scalability</li>
-            <li>Previously worked for Microsoft North America</li>
-        </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="card" id="contact">
-        <h2>Contact</h2>
-        <form id="contactForm">
-<input type="text" placeholder="Your Name" required><br><br>
-<input type="email" placeholder="Your Email" required><br><br>
-<textarea placeholder="Message" required></textarea><br><br>
-<button type="submit">Send Message</button>
+<form id="contactForm">
+  <input id="name" type="text" placeholder="Your Name" required><br><br>
+  <input id="email" type="email" placeholder="Your Email" required><br><br>
+  <textarea id="message" placeholder="Message" required></textarea><br><br>
+  <button type="submit">Send Message</button>
 </form>
-        <p><b>Email:</b> contact@naveenindia.com</p>
-        <p><b>Location:</b> Doha, Qatar</p>
-        <p><b>Availability:</b> Remote & On-site Consulting</p>
-    </div>
+
+<p><b>Email:</b> contact@naveenindia.com</p>
+<p><b>Location:</b> Doha, Qatar</p>
 
 </div>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/974 33990879" target="_blank" style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-">💬</a>
+</div>
 
-<!-- FOOTER -->
 <div class="footer">
-    © 2026 Naveen Prasad Kuniyil | IT Consultant
+© 2026 Naveen Prasad Kuniyil
 </div>
 
-</body>
-    <script>
+<!-- SCRIPT (CORRECT POSITION) -->
+<script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){
-e.preventDefault();
+  e.preventDefault();
 
-await fetch("https://contact-form.naveenprasad-naveen.workers.dev", {
-method: "POST",
-headers: {"Content-Type":"application/json"},
-body: JSON.stringify({
-name: e.target[0].value,
-email: e.target[1].value,
-message: e.target[2].value
-})
-});
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-alert("Message sent successfully!");
+  try {
+    await fetch("https://contact-form.naveenprasad-naveen.workers.dev", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ name, email, message })
+    });
+
+    alert("Message sent successfully!");
+  } catch (error) {
+    alert("Error sending message");
+    console.error(error);
+  }
 });
 </script>
+
+</body>
 </html>

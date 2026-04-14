@@ -205,6 +205,12 @@ body {
     <!-- CONTACT -->
     <div class="card" id="contact">
         <h2>Contact</h2>
+        <form id="contactForm">
+<input type="text" placeholder="Your Name" required><br><br>
+<input type="email" placeholder="Your Email" required><br><br>
+<textarea placeholder="Message" required></textarea><br><br>
+<button type="submit">Send Message</button>
+</form>
         <p><b>Email:</b> nav_pra@outlook.com</p>
         <p><b>Location:</b> Doha, Qatar</p>
         <p><b>Availability:</b> Remote & On-site Consulting</p>
@@ -232,4 +238,21 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 </div>
 
 </body>
+    <script>
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+e.preventDefault();
+
+await fetch("https://contact-form.naveenprasad-naveen.workers.dev", {
+method: "POST",
+headers: {"Content-Type":"application/json"},
+body: JSON.stringify({
+name: e.target[0].value,
+email: e.target[1].value,
+message: e.target[2].value
+})
+});
+
+alert("Message sent successfully!");
+});
+</script>
 </html>

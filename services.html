@@ -35,6 +35,17 @@ cursor:pointer;
 color:white;
 }
 
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#1b263b,#415a77);
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+.hero h2{font-size:32px;margin-bottom:10px;}
+.hero p{max-width:700px;margin:auto;}
+
 /* SECTION */
 .section{
 padding:60px 20px;
@@ -90,7 +101,7 @@ text-decoration:none;
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width:768px){
 
 .menu-toggle{display:block;}
@@ -115,6 +126,9 @@ nav.active{display:flex;}
 .cards{
 grid-template-columns:1fr;
 }
+
+.hero{padding:50px 15px;}
+.hero h2{font-size:24px;}
 
 }
 </style>
@@ -142,40 +156,45 @@ grid-template-columns:1fr;
 
 </header>
 
-<section class="section">
+<!-- HERO -->
+<section class="hero">
+<h2>IT Consulting Services</h2>
+<p>Enterprise-level solutions in Cybersecurity, Healthcare IT, Infrastructure, and Business Optimization</p>
+</section>
 
-<h2 style="text-align:center;margin-bottom:30px;">Services</h2>
+<!-- SERVICES -->
+<section class="section">
 
 <div class="cards">
 
 <div class="card">
 <h3>Cybersecurity Consulting</h3>
-<p>Palo Alto, SonicWall, Endpoint Security, Threat Detection, Zero Trust Architecture.</p>
+<p>Advanced security solutions using Palo Alto, SonicWall, endpoint protection, and zero trust architecture to protect your organization.</p>
 </div>
 
 <div class="card">
 <h3>Healthcare IT Solutions</h3>
-<p>HMS Systems, Insurance Integration, Secure Medical Infrastructure.</p>
+<p>Specialized in HMS systems, insurance integration, and secure clinical IT environments for medical centers.</p>
 </div>
 
 <div class="card">
 <h3>IT Infrastructure Design</h3>
-<p>Servers, Virtualization, Cloud Deployment, High Availability Design.</p>
+<p>Design and deployment of servers, virtualization platforms, cloud environments, and high availability systems.</p>
 </div>
 
 <div class="card">
 <h3>Backup & Disaster Recovery</h3>
-<p>Enterprise-grade backup strategies and business continuity planning.</p>
+<p>Enterprise-grade backup strategies ensuring business continuity and minimal downtime.</p>
 </div>
 
 <div class="card">
 <h3>IT Consulting & Optimization</h3>
-<p>Cost reduction, performance optimization, architecture redesign.</p>
+<p>Improve performance, reduce costs, and redesign IT architecture for efficiency and scalability.</p>
 </div>
 
 <div class="card">
 <h3>Multi-Branch IT Management</h3>
-<p>Centralized management for organizations with multiple locations.</p>
+<p>Centralized management solutions for organizations with multiple branches and distributed networks.</p>
 </div>
 
 </div>

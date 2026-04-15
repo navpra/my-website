@@ -1,293 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Naveen Prasad Kuniyil | IT Consultant</title>
-
-<!-- FONT AWESOME (WHATSAPP ICON) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naveen Prasad Kuniyil | Healthcare IT Consultant</title>
 
 <style>
-body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f4f6f9;
-    line-height:1.6;
-}
-
-/* NAVBAR */
-.navbar {
-    position:sticky;
-    top:0;
-    background:#0b3d91;
-    padding:15px;
-    text-align:center;
-    z-index:1000;
-}
-
-.navbar a {
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:500;
-}
+body {margin:0;font-family:Segoe UI;background:#0b0f1a;color:#fff;}
+.container {width:90%;max-width:1200px;margin:auto;}
+h1,h2,h3{margin-bottom:15px}
+p{color:#cbd5e1;line-height:1.6}
 
 /* HERO */
 .hero {
-    background:linear-gradient(135deg,#0b3d91,#1e5bd8);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+  padding:100px 0;
+  text-align:center;
+  background:linear-gradient(135deg,#0b0f1a,#1e293b);
 }
-
-.hero img {
-    width:140px;
-    height:140px;
-    object-fit:cover;
-    border-radius:50%;
-    border:4px solid white;
-    box-shadow:0 6px 20px rgba(0,0,0,0.3);
-}
-
-.hero h1 {
-    margin-top:15px;
-    font-size:32px;
-}
-
-.hero p {
-    font-size:16px;
-    opacity:0.95;
-}
-
-.hero .cta {
-    margin-top:15px;
-}
-
-/* BUTTON */
+.hero h1 {font-size:48px;}
+.hero p {max-width:800px;margin:auto;font-size:18px;}
 .btn {
-    display:inline-block;
-    background:white;
-    color:#0b3d91;
-    padding:10px 15px;
-    border-radius:6px;
-    text-decoration:none;
-    margin:10px 5px;
-    font-weight:bold;
+  background:#2563eb;
+  padding:14px 28px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  display:inline-block;
+  margin-top:20px;
 }
 
-/* CONTAINER */
-.container {
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
+/* SECTION */
+.section {padding:80px 0;}
+.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card {background:#111827;padding:20px;border-radius:10px}
+
+/* CONTACT */
+input,textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:6px;
+  border:none;
 }
 
-/* SECTION TITLE */
-h2 {
-    border-left:5px solid #0b3d91;
-    padding-left:10px;
-}
-
-/* CARD */
-.card {
-    background:white;
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:12px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-5px);
-}
-
-/* GRID */
-.grid {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-@media(max-width:768px){
-    .grid {
-        grid-template-columns:1fr;
-    }
-}
-
-/* HIGHLIGHT */
-.highlight {
-    background:#eef3ff;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:25px;
-    text-align:center;
-    font-weight:500;
-}
-
-/* FORM */
-input, textarea {
-    width:100%;
-    padding:10px;
-    border-radius:6px;
-    border:1px solid #ccc;
-}
-
-button {
-    background:#0b3d91;
-    color:white;
-    padding:12px;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-/* FOOTER */
-.footer {
-    text-align:center;
-    padding:20px;
-    background:#0b3d91;
-    color:white;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:16px;
-    border-radius:50%;
-    font-size:24px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    z-index:999;
-}
+footer {background:#020617;text-align:center;padding:20px}
 </style>
-
 </head>
 
 <body>
 
-<div class="navbar">
-    <a href="#about">About</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</div>
-
-<div class="hero">
-    <img src="profile.jpg" alt="Profile">
-    <h1>Naveen Prasad Kuniyil</h1>
-    <p><b>IT Infrastructure & Cybersecurity Consultant</b></p>
-    <p>Helping healthcare and enterprise organizations secure infrastructure, optimize performance, and eliminate downtime</p>
-
-    <div class="cta">
-        <a href="mailto:nav_pra@outlook.com" class="btn">Email Me</a>
-        <a href="https://wa.me/97433990879" class="btn">WhatsApp</a>
-        <a href="https://linkedin.com/in/naveen-prasad-5967874" class="btn">LinkedIn</a>
-    </div>
-</div>
-
+<!-- HERO -->
+<section class="hero">
 <div class="container">
-
-<div class="highlight">
-23+ Years Experience | 30+ Projects | Healthcare IT Specialist | International Consulting
-</div>
-
-<div class="card" id="about">
-<h2>About Me</h2>
+<h1>Transforming Healthcare IT Infrastructure</h1>
 <p>
-Seasoned IT leader with over 23 years of experience, including 16+ years in international IT management. 
-Currently serving as IT Manager at Al-Hayat Group, Doha, leading enterprise infrastructure, cybersecurity, and healthcare IT initiatives.
+Helping hospitals and enterprises design secure, scalable, and compliant IT environments.
+Specialized in healthcare systems, cybersecurity, and digital transformation.
+</p>
+<a href="#contact" class="btn">Request Consultation</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+<div class="container">
+<h2>About</h2>
+<p>
+I am Naveen Prasad Kuniyil, an experienced IT Manager and Consultant with over 20 years of IT expertise,
+including more than 15 years in international healthcare IT leadership.
+</p>
+<p>
+Currently leading IT operations at Al-Hayat Medical Center Group (Doha, Qatar), I have successfully delivered
+multi-branch healthcare IT projects, secure infrastructure deployments, and compliance-driven implementations.
 </p>
 </div>
+</section>
 
-<div class="card" id="expertise">
-<h2>Professional Expertise</h2>
-<p>
-Proven track record in digital transformation, cybersecurity, and enterprise infrastructure design across healthcare and SMB sectors.
-Successfully led multi-branch IT deployments, compliance initiatives, and secure infrastructure implementations.
-</p>
-</div>
-
-<div class="card">
-<h2>Healthcare IT Expertise</h2>
-<ul>
-<li>Hospital Management System (HMS) deployment across multiple branches</li>
-<li>JCI accreditation support and compliance</li>
-<li>Integration with National Healthcare Systems</li>
-<li>Secure patient data and infrastructure</li>
-</ul>
-</div>
-
-<div class="card" id="services">
-<h2>Services</h2>
+<!-- EXPERTISE -->
+<section class="section">
+<div class="container">
+<h2>Core Expertise</h2>
 <div class="grid">
-<div><h3>Network Security</h3><p>Palo Alto, Fortinet, Cisco, CheckPoint, SonicWall</p></div>
-<div><h3>IT Infrastructure</h3><p>Enterprise network design & deployment</p></div>
-<div><h3>Cloud</h3><p>Microsoft 365, Azure, Backup</p></div>
-<div><h3>Consulting</h3><p>SMB IT consulting (Global)</p></div>
+<div class="card">Healthcare IT (HMS, JCI, eHealth)</div>
+<div class="card">Cybersecurity (Palo Alto, EDR, Firewalls)</div>
+<div class="card">Infrastructure (Windows Server, Hyper-V)</div>
+<div class="card">Cloud & Microsoft 365</div>
+<div class="card">Multi-branch Network Design</div>
+<div class="card">IT Strategy & Consulting</div>
 </div>
 </div>
+</section>
 
-<div class="card" id="projects">
-<h2>Key Projects</h2>
-<ul>
-<li>GlobalProtect VPN deployment</li>
-<li>Healthcare multi-branch infrastructure</li>
-<li>Backup & DR systems</li>
-<li>Firewall optimization</li>
-</ul>
+<!-- ACHIEVEMENTS -->
+<section class="section">
+<div class="container">
+<h2>Key Achievements</h2>
+<div class="grid">
+<div class="card">Successfully deployed Hospital Management Systems across multiple branches</div>
+<div class="card">Supported Joint Commission International (JCI) accreditation</div>
+<div class="card">Aligned IT systems with Qatar eHealth initiatives</div>
+<div class="card">Delivered secure infrastructure for healthcare and financial institutions</div>
 </div>
+</div>
+</section>
 
-<div class="card" id="contact">
+<!-- CONSULTING -->
+<section class="section">
+<div class="container">
+<h2>Consulting Services</h2>
+<div class="grid">
+<div class="card">
+<h3>IT Infrastructure Design</h3>
+<p>Secure and scalable enterprise architecture.</p>
+</div>
+<div class="card">
+<h3>Cybersecurity</h3>
+<p>End-to-end protection with enterprise firewalls and EDR.</p>
+</div>
+<div class="card">
+<h3>Healthcare IT Consulting</h3>
+<p>Compliance, HMS, and digital transformation.</p>
+</div>
+<div class="card">
+<h3>IT Audit & Optimization</h3>
+<p>Improve performance, security, and cost efficiency.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<div class="container">
 <h2>Contact</h2>
 
 <form id="contactForm">
-<input id="name" type="text" placeholder="Your Name" required><br><br>
-<input id="email" type="email" placeholder="Your Email" required><br><br>
-<textarea id="message" placeholder="Message" required></textarea><br><br>
-<button type="submit">Send Message</button>
+<input type="text" placeholder="Your Name" id="name" required>
+<input type="email" placeholder="Your Email" id="email" required>
+<textarea placeholder="Your Message" id="message" required></textarea>
+<button class="btn" type="submit">Send Message</button>
 </form>
 
-<p><b>Email:</b> contact@naveenindia.com</p>
-<p><b>Location:</b> Doha, Qatar</p>
-</div>
+<p id="status"></p>
 
 </div>
+</section>
 
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/97433990879" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<div class="footer">
-© 2026 Naveen Prasad Kuniyil | IT Consultant
-</div>
+<footer>
+© 2026 Naveen Prasad Kuniyil | IT Consultant | naveenindia.com
+</footer>
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 e.preventDefault();
 
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const message = document.getElementById("message").value;
+const data = {
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+message: document.getElementById("message").value
+};
 
 try {
 await fetch("https://contact-form.naveenprasad-naveen.workers.dev", {
-method: "POST",
-headers: {"Content-Type":"application/json"},
-body: JSON.stringify({ name, email, message })
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify(data)
 });
-
-alert("Message sent successfully!");
-e.target.reset();
-
-} catch (error) {
-alert("Error sending message");
+document.getElementById("status").innerText="Message sent successfully!";
+} catch {
+document.getElementById("status").innerText="Error sending message";
 }
 });
 </script>

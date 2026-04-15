@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Naveen Prasad Kuniyil</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91E7ZZQW8B"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91E7ZZQW8B');
+</script>
 
 <style>
-body{font-family:Poppins;background:#f5f7fb;}
-header{background:#0d1b2a;color:white;padding:20px;}
-nav a{color:white;margin-left:20px;}
-.section{padding:40px;max-width:600px;margin:auto;}
-input,textarea{width:100%;padding:10px;margin:10px 0;}
-footer{background:#0d1b2a;color:white;text-align:center;padding:20px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#f5f7fb;color:#222;}
+
+header{
+background:#0d1b2a;color:#fff;padding:20px 40px;
+display:flex;justify-content:space-between;align-items:center;
+}
+
+nav a{
+color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
+}
+
+.lang-switch{
+display:flex;gap:5px;
+}
+
+.lang-switch button{
+background:transparent;border:1px solid white;color:white;
+padding:5px 10px;border-radius:20px;cursor:pointer;
+}
+
+.hero{
+background:linear-gradient(135deg,#1b263b,#415a77);
+color:white;padding:80px 20px;text-align:center;
+}
+
+.section{padding:60px 20px;max-width:800px;margin:auto;}
+
+.contact input, .contact textarea{
+width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:5px;
+}
+
+.btn{
+display:inline-block;padding:12px 25px;background:#00b4d8;
+color:#fff;border-radius:30px;text-decoration:none;margin-top:10px;
+font-weight:600;border:none;cursor:pointer;
+}
+
+footer{
+background:#0d1b2a;color:white;text-align:center;padding:20px;
+}
+
+.float-icons{
+position:fixed;bottom:20px;right:20px;
+display:flex;flex-direction:column;gap:10px;
+}
+
+.float-icons a{
+width:50px;height:50px;display:flex;align-items:center;justify-content:center;
+border-radius:50%;color:white;font-size:20px;text-decoration:none;
+}
+
+.whatsapp{background:#25D366;}
+.email{background:#0077b5;}
+.linkedin{background:#0A66C2;}
+
+body[dir="rtl"]{direction:rtl;text-align:right;}
 </style>
 
 </head>
@@ -20,45 +84,104 @@ footer{background:#0d1b2a;color:white;text-align:center;padding:20px;}
 <body>
 
 <header>
-<h2>Naveen Prasad Kuniyil</h2>
+<h1>Naveen Prasad Kuniyil</h1>
+
+<div style="display:flex;align-items:center;gap:15px;">
 <nav>
 <a href="index.html">Home</a>
+<a href="index.html#about">About</a>
 <a href="services.html">Services</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="germany.html">Germany / EU</a>
 <a href="contact.html">Contact</a>
 </nav>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
+</div>
 </header>
 
-<section class="section">
-
+<section class="hero">
 <h2>Contact Me</h2>
+<p>Let’s discuss your IT requirements and solutions</p>
+</section>
+
+<section class="section contact">
 
 <form id="contactForm">
-<input type="text" placeholder="Name" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Message" required></textarea>
-<button>Send</button>
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Message" required></textarea>
+<button class="btn">Send Message</button>
 </form>
 
 <p id="status"></p>
 
-<h3>Book Consultation</h3>
+<h3 style="margin-top:40px;">Book Consultation</h3>
 
 <iframe src="https://calendly.com/naveenprasad-naveen/30min"
 width="100%" height="600"></iframe>
 
 </section>
 
+<!-- FLOAT ICONS -->
+<div class="float-icons">
+
+<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" target="_blank" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="mailto:nav_pra@outlook.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/naveen-prasad-kuniyil-5967874" target="_blank" class="linkedin">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+</div>
+
 <footer>
-<p>© 2026 Naveen Prasad Kuniyil</p>
+<p>© 2026 Naveen Prasad Kuniyil | IT Consultant</p>
+<p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
 </footer>
 
+<!-- TRANSLATE -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+
+function setLang(lang) {
+const interval = setInterval(() => {
+const select = document.querySelector(".goog-te-combo");
+if (select) {
+select.value = lang;
+select.dispatchEvent(new Event("change"));
+clearInterval(interval);
+}
+}, 300);
+
+if (lang === "ar") document.body.setAttribute("dir","rtl");
+else document.body.setAttribute("dir","ltr");
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- CONTACT SCRIPT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 e.preventDefault();
+
 await fetch("https://contact-form.naveenprasad-naveen.workers.dev",{method:"POST"});
-document.getElementById("status").innerText="Message sent!";
+
+document.getElementById("status").innerText="Message sent successfully!";
 });
 </script>
 

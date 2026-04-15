@@ -12,7 +12,6 @@
 <meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, Palo Alto, SonicWall, IT Infrastructure, Germany IT Jobs">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- GOOGLE ANALYTICS -->
@@ -37,16 +36,21 @@ nav a{
 color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
 }
 
-/* TRANSLATE STYLE */
-#google_translate_element {
-background:white;
-padding:5px 10px;
-border-radius:5px;
+.lang-switch{
+display:flex;gap:5px;
 }
 
-.goog-te-combo {
-border:none;
-outline:none;
+.lang-switch button{
+background:transparent;
+border:1px solid white;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.lang-switch button:hover{
+background:white;color:#0d1b2a;
 }
 
 /* HERO */
@@ -104,6 +108,12 @@ border-radius:50%;color:white;font-size:20px;text-decoration:none;
 .whatsapp{background:#25D366;}
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
+
+/* RTL */
+body[dir="rtl"]{
+direction:rtl;
+text-align:right;
+}
 </style>
 
 </head>
@@ -121,15 +131,13 @@ border-radius:50%;color:white;font-size:20px;text-decoration:none;
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- LANGUAGE SWITCH -->
 <div class="lang-switch">
-  <button onclick="translatePage('en')">EN</button>
-  <button onclick="translatePage('de')">DE</button>
-  <button onclick="translatePage('ar')">AR</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
 </div>
 
 </div>
-
 </header>
 
 <!-- HERO -->
@@ -269,39 +277,47 @@ Specialized in Healthcare IT, Cybersecurity, Infrastructure Design, and Enterpri
 <p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
 </footer>
 
+<!-- TRANSLATE ENGINE -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
+function setLang(lang) {
+  const interval = setInterval(() => {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+      clearInterval(interval);
+    }
+  }, 300);
+
+  if (lang === "ar") {
+    document.body.setAttribute("dir", "rtl");
+  } else {
+    document.body.setAttribute("dir", "ltr");
+  }
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <!-- CONTACT SCRIPT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 e.preventDefault();
 
-const data = {
-name: document.getElementById("name").value,
-email: document.getElementById("email").value,
-message: document.getElementById("message").value
-};
-
-await fetch("https://contact-form.naveenprasad-naveen.workers.dev", {
-method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify(data)
-});
+await fetch("https://contact-form.naveenprasad-naveen.workers.dev",{method:"POST"});
 
 document.getElementById("status").innerText="Message sent successfully!";
 });
 </script>
-
-<!-- GOOGLE TRANSLATE -->
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'ar,de',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-</script>
-
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

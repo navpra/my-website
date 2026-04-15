@@ -149,13 +149,35 @@ text-align: right;
 </footer>
 
 <script>
-function setLang(lang){
-if(lang==="ar"){
-document.body.setAttribute("dir","rtl");
-}else{
-document.body.setAttribute("dir","ltr");
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false
+  }, 'google_translate_element');
 }
+
+function setLang(lang) {
+  const select = document.querySelector(".goog-te-combo");
+
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+  }
+
+  // RTL for Arabic
+  if (lang === "ar") {
+    document.body.setAttribute("dir", "rtl");
+  } else {
+    document.body.setAttribute("dir", "ltr");
+  }
 }
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Hidden container -->
+<div id="google_translate_element" style="display:none;"></div>
 </script>
 
 <script>

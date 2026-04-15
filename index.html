@@ -12,7 +12,6 @@
 <meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, Palo Alto, SonicWall, IT Infrastructure, Germany IT Jobs">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- GOOGLE ANALYTICS -->
@@ -33,77 +32,37 @@ background:#0d1b2a;color:#fff;padding:20px 40px;
 display:flex;justify-content:space-between;align-items:center;
 }
 
-nav a{
-color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
+nav a{color:#fff;margin-left:20px;text-decoration:none;}
+
+.lang-switch button{
+background:transparent;border:1px solid white;color:white;
+padding:5px 10px;border-radius:20px;margin-left:5px;cursor:pointer;
 }
 
-/* TRANSLATE STYLE */
-#google_translate_element {
-background:white;
-padding:5px 10px;
-border-radius:5px;
-}
+.hero{background:linear-gradient(135deg,#1b263b,#415a77);color:white;padding:80px;text-align:center;}
+.hero img{width:150px;border-radius:50%;margin-bottom:20px;border:4px solid white;}
 
-.goog-te-combo {
-border:none;
-outline:none;
-}
+.btn{padding:12px 25px;background:#00b4d8;color:#fff;border-radius:30px;text-decoration:none;margin:10px;display:inline-block;}
 
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#1b263b,#415a77);
-color:white;padding:80px 20px;text-align:center;
-}
+.section{padding:60px;max-width:1100px;margin:auto;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
 
-.hero img{
-width:150px;border-radius:50%;margin-bottom:20px;border:4px solid white;
-}
+.contact input,.contact textarea{width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:5px;}
 
-.hero h2{font-size:32px;margin-bottom:10px;}
-.hero p{max-width:700px;margin:auto;margin-bottom:20px;}
+footer{background:#0d1b2a;color:white;text-align:center;padding:20px;}
 
-.btn{
-display:inline-block;padding:12px 25px;background:#00b4d8;
-color:#fff;border-radius:30px;text-decoration:none;margin:10px;
-font-weight:600;
-}
-
-.section{padding:60px 20px;max-width:1100px;margin:auto;}
-.section h2{text-align:center;margin-bottom:30px;}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;padding:20px;border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.contact input, .contact textarea{
-width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:5px;
-}
-
-footer{
-background:#0d1b2a;color:white;text-align:center;padding:20px;
-}
-
-/* FLOAT ICONS */
-.float-icons{
-position:fixed;bottom:20px;right:20px;
-display:flex;flex-direction:column;gap:10px;
-}
-
-.float-icons a{
-width:50px;height:50px;display:flex;align-items:center;justify-content:center;
-border-radius:50%;color:white;font-size:20px;text-decoration:none;
-}
-
+.float-icons{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;}
+.float-icons a{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:white;}
 .whatsapp{background:#25D366;}
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
+
+/* RTL Arabic */
+body[dir="rtl"] {
+direction: rtl;
+text-align: right;
+}
 </style>
 
 </head>
@@ -113,7 +72,7 @@ border-radius:50%;color:white;font-size:20px;text-decoration:none;
 <header>
 <h1>Naveen Prasad Kuniyil</h1>
 
-<div style="display:flex;align-items:center;gap:15px;">
+<div style="display:flex;align-items:center;">
 <nav>
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -121,183 +80,91 @@ border-radius:50%;color:white;font-size:20px;text-decoration:none;
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- LANGUAGE SWITCH -->
-<div id="google_translate_element"></div>
-
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
 </div>
 
 </header>
 
-<!-- HERO -->
 <section class="hero">
-<img src="profile.jpg" alt="Naveen">
-
+<img src="profile.jpg">
 <h2>IT Consultant | Cybersecurity | Healthcare IT</h2>
 
 <p>
 20+ Years Experience | IT Manager in Qatar | Delivered 30+ Projects across Healthcare, Finance, and Enterprise Infrastructure
 </p>
 
-<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">
-Book Free Consultation
-</a>
-
-<a href="naveen-cv.pdf" class="btn" target="_blank">
-Download CV
-</a>
-
-<a href="germany.html" class="btn">
-Germany / EU Opportunities
-</a>
+<a href="https://calendly.com/naveenprasad-naveen/30min" class="btn" target="_blank">Book Free Consultation</a>
+<a href="naveen-cv.pdf" class="btn" target="_blank">Download CV</a>
+<a href="germany.html" class="btn">Germany / EU Opportunities</a>
 
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
 <h2>About Me</h2>
-<p>
-I am an IT Manager and Consultant with over 20 years of experience, including 15+ years in international environments. 
-Specialized in Healthcare IT, Cybersecurity, Infrastructure Design, and Enterprise Solutions.
-</p>
+<p>I am an IT Manager and Consultant with over 20 years of experience...</p>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="section">
 <h2>Services</h2>
-
 <div class="cards">
-<div class="card">
-<h3>Cybersecurity</h3>
-<p>Palo Alto, SonicWall, Endpoint Security, Threat Protection</p>
+<div class="card"><h3>Cybersecurity</h3><p>Palo Alto, SonicWall</p></div>
+<div class="card"><h3>Healthcare IT</h3><p>HMS Systems</p></div>
+<div class="card"><h3>Infrastructure</h3><p>Servers, Cloud</p></div>
+<div class="card"><h3>Consulting</h3><p>Architecture</p></div>
 </div>
-
-<div class="card">
-<h3>Healthcare IT</h3>
-<p>HMS Systems, Insurance Integration, Secure Infrastructure</p>
-</div>
-
-<div class="card">
-<h3>Infrastructure</h3>
-<p>Servers, Virtualization, Cloud, Backup Solutions</p>
-</div>
-
-<div class="card">
-<h3>IT Consulting</h3>
-<p>Architecture, Optimization, Cost Reduction</p>
-</div>
-</div>
-
 </section>
 
-<!-- CASE STUDIES -->
 <section id="cases" class="section">
 <h2>Case Studies</h2>
-
 <div class="cards">
-<div class="card">
-<h3>Hospital Network Upgrade</h3>
-<p>Improved network performance and eliminated downtime across 7 branches.</p>
+<div class="card">Hospital Network Upgrade</div>
+<div class="card">Cybersecurity Implementation</div>
+<div class="card">Server Optimization</div>
 </div>
-
-<div class="card">
-<h3>Cybersecurity Implementation</h3>
-<p>Deployed enterprise security reducing threats by 90%.</p>
-</div>
-
-<div class="card">
-<h3>Server Optimization</h3>
-<p>Reduced server load and improved performance significantly.</p>
-</div>
-</div>
-
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section">
-<h2>Testimonials</h2>
-
-<div class="cards">
-<div class="card">
-<p>"Highly professional and reliable IT expert."</p>
-</div>
-
-<div class="card">
-<p>"Transformed our IT infrastructure completely."</p>
-</div>
-</div>
-
-</section>
-
-<!-- CONTACT -->
 <section id="contact" class="section contact">
-<h2>Contact Me</h2>
-
+<h2>Contact</h2>
 <form id="contactForm">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" placeholder="Message" required></textarea>
-<button class="btn">Send Message</button>
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+<textarea id="message"></textarea>
+<button class="btn">Send</button>
 </form>
-
 <p id="status"></p>
-
 </section>
 
-<!-- FLOAT ICONS -->
 <div class="float-icons">
-
-<a href="https://wa.me/97433990879?text=Hello%20I%20would%20like%20to%20discuss%20IT%20consultation" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="mailto:nav_pra@outlook.com" class="email">
-<i class="fas fa-envelope"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/naveen-prasad-kuniyil-5967874" target="_blank" class="linkedin">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
+<a href="https://wa.me/97433990879?text=Hello%20I%20would%20like%20to%20discuss%20IT%20consultation" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="mailto:nav_pra@outlook.com" class="email"><i class="fas fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/naveen-prasad-kuniyil-5967874" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
 </div>
 
 <footer>
-<p>© 2026 Naveen Prasad Kuniyil | IT Consultant</p>
-<p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
+<p>© 2026 Naveen Prasad Kuniyil</p>
 </footer>
 
-<!-- CONTACT SCRIPT -->
 <script>
-document.getElementById("contactForm").addEventListener("submit", async function(e){
-e.preventDefault();
-
-const data = {
-name: document.getElementById("name").value,
-email: document.getElementById("email").value,
-message: document.getElementById("message").value
-};
-
-await fetch("https://contact-form.naveenprasad-naveen.workers.dev", {
-method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify(data)
-});
-
-document.getElementById("status").innerText="Message sent successfully!";
-});
-</script>
-
-<!-- GOOGLE TRANSLATE -->
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'ar,de',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
+function setLang(lang){
+if(lang==="ar"){
+document.body.setAttribute("dir","rtl");
+}else{
+document.body.setAttribute("dir","ltr");
+}
 }
 </script>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+e.preventDefault();
+await fetch("https://contact-form.naveenprasad-naveen.workers.dev",{method:"POST"});
+document.getElementById("status").innerText="Message sent successfully!";
+});
+</script>
 
 </body>
 </html>

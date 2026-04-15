@@ -5,9 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Naveen Prasad Kuniyil | IT Consultant</title>
+<title>Naveen Prasad Kuniyil | IT Consultant | Cybersecurity | Healthcare IT</title>
 
 <meta name="description" content="IT Consultant with 23+ years experience in Cybersecurity, Healthcare IT, Infrastructure, and Digital Transformation.">
+
+<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, Palo Alto, SonicWall, IT Infrastructure, Germany IT Jobs">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -28,7 +30,19 @@ color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
 }
 
 .menu-toggle{
-display:none;font-size:26px;cursor:pointer;color:white;
+display:none;
+font-size:26px;
+cursor:pointer;
+color:white;
+}
+
+.lang-switch{
+display:flex;gap:5px;
+}
+
+.lang-switch button{
+background:transparent;border:1px solid white;color:white;
+padding:5px 10px;border-radius:20px;cursor:pointer;
 }
 
 /* HERO */
@@ -41,9 +55,13 @@ color:white;padding:80px 20px;text-align:center;
 width:150px;border-radius:50%;margin-bottom:20px;border:4px solid white;
 }
 
+.hero h2{font-size:32px;margin-bottom:10px;}
+.hero p{max-width:700px;margin:auto;margin-bottom:20px;}
+
 .btn{
 display:inline-block;padding:12px 25px;background:#00b4d8;
 color:#fff;border-radius:30px;text-decoration:none;margin:10px;
+font-weight:600;
 }
 
 /* SECTION */
@@ -62,11 +80,10 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* CONTACT */
-input,textarea{
-width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;
+.contact input, .contact textarea{
+width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:5px;
 }
 
-/* FOOTER */
 footer{
 background:#0d1b2a;color:white;text-align:center;padding:20px;
 }
@@ -79,7 +96,7 @@ display:flex;flex-direction:column;gap:10px;
 
 .float-icons a{
 width:50px;height:50px;display:flex;align-items:center;justify-content:center;
-border-radius:50%;color:white;font-size:20px;
+border-radius:50%;color:white;font-size:20px;text-decoration:none;
 }
 
 .whatsapp{background:#25D366;}
@@ -87,18 +104,34 @@ border-radius:50%;color:white;font-size:20px;
 .linkedin{background:#0A66C2;}
 
 /* MOBILE */
-@media(max-width:768px){
+@media (max-width:768px){
 
 .menu-toggle{display:block;}
 
 nav{
-display:none;flex-direction:column;width:100%;background:#0d1b2a;
+display:none;
+flex-direction:column;
+width:100%;
+background:#0d1b2a;
+margin-top:10px;
+}
+
+nav a{
+padding:10px;
+margin:0;
 }
 
 nav.active{display:flex;}
 
+.section{padding:40px 15px;}
 .cards{grid-template-columns:1fr;}
 
+}
+
+/* RTL */
+body[dir="rtl"]{
+direction:rtl;
+text-align:right;
 }
 </style>
 
@@ -107,38 +140,52 @@ nav.active{display:flex;}
 <body>
 
 <header>
+
 <h1>Naveen Prasad Kuniyil</h1>
 
 <div class="menu-toggle" onclick="toggleMenu()">
 <i class="fas fa-bars"></i>
 </div>
 
+<div style="display:flex;align-items:center;gap:15px;width:100%;flex-wrap:wrap;">
+
 <nav id="navMenu">
+<a href="index.html">Home</a>
 <a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#cases">Case Studies</a>
+<a href="services.html">Services</a>
+<a href="case-studies.html">Case Studies</a>
 <a href="germany.html">Germany / EU</a>
 <a href="#contact">Contact</a>
 </nav>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
+
+</div>
+
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<img src="profile.jpg">
+<img src="profile.jpg" alt="Naveen">
 <h2>IT Consultant | Cybersecurity | Healthcare IT</h2>
-<p>23+ Years Experience | IT Manager – Al-Hayat Medical Center Group</p>
+<p>23+ Years Experience | IT Manager – Al-Hayat Medical Center Group | 30+ Projects Delivered</p>
 
-<a href="https://calendly.com/naveenprasad-naveen/30min" class="btn">Book Consultation</a>
-<a href="naveen-cv.pdf" class="btn">Download CV</a>
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Book Free Consultation</a>
+<a href="naveen-cv.pdf" class="btn" target="_blank">Download CV</a>
+<a href="germany.html" class="btn">Germany / EU Opportunities</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
 <h2>About Me</h2>
 <p>
-IT Manager with over 23 years of experience including 16+ years in international IT management. 
-Currently leading IT operations at Al-Hayat Medical Center Group, Qatar, managing infrastructure, cybersecurity, 
-and digital transformation across multiple branches. Proven ability to align IT systems with business and clinical operations.
+IT Manager with over 23 years of experience, including 16+ years in international IT management.
+Currently leading IT operations at Al-Hayat Medical Center Group, Qatar, managing infrastructure,
+cybersecurity, cloud systems, and digital transformation across multiple branches.
 </p>
 </section>
 
@@ -149,23 +196,23 @@ and digital transformation across multiple branches. Proven ability to align IT 
 <div class="cards">
 
 <div class="card">
-<h3>Cybersecurity</h3>
+<h3>Cybersecurity Consulting</h3>
 <p>Palo Alto, FortiGate, SonicWall, Check Point, endpoint security, and enterprise threat protection.</p>
 </div>
 
 <div class="card">
-<h3>Healthcare IT</h3>
-<p>HMS systems, insurance integration, eHealth compliance, and clinical IT systems.</p>
+<h3>Healthcare IT Solutions</h3>
+<p>HMS systems, insurance integration, eHealth compliance, and secure clinical IT environments.</p>
 </div>
 
 <div class="card">
-<h3>Infrastructure</h3>
-<p>Windows Server, Hyper-V, VMware, cloud (Azure), and enterprise IT architecture.</p>
+<h3>IT Infrastructure</h3>
+<p>Windows Server, Hyper-V, VMware, cloud (Azure), and enterprise architecture.</p>
 </div>
 
 <div class="card">
-<h3>Backup & DR</h3>
-<p>Veritas, Acronis, Rubrik-based backup and disaster recovery solutions.</p>
+<h3>Backup & Disaster Recovery</h3>
+<p>Veritas, Acronis, Rubrik-based enterprise backup solutions.</p>
 </div>
 
 </div>
@@ -185,12 +232,12 @@ and digital transformation across multiple branches. Proven ability to align IT 
 
 <div class="card">
 <h3>Cybersecurity Implementation</h3>
-<p>Deployed enterprise firewall and endpoint security reducing threats by over 90%.</p>
+<p>Reduced threats by over 90% using enterprise firewall and endpoint protection.</p>
 </div>
 
 <div class="card">
 <h3>Backup Modernization</h3>
-<p>Implemented Veritas Backup Exec and centralized monitoring for business continuity.</p>
+<p>Implemented centralized backup and disaster recovery solutions.</p>
 </div>
 
 </div>
@@ -198,7 +245,7 @@ and digital transformation across multiple branches. Proven ability to align IT 
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section contact">
 <h2>Contact</h2>
 
 <form>

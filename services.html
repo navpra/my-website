@@ -17,21 +17,32 @@
 
 body{background:#f5f7fb;color:#222;}
 
+/* HEADER */
 header{
-background:#0d1b2a;color:#fff;padding:20px 40px;
+background:#0d1b2a;color:#fff;padding:20px;
 display:flex;justify-content:space-between;align-items:center;
+flex-wrap:wrap;
 }
 
 nav a{
 color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
 }
 
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+color:white;
+}
+
+/* SECTION */
 .section{
 padding:60px 20px;
 max-width:1100px;
 margin:auto;
 }
 
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -45,6 +56,7 @@ border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* FOOTER */
 footer{
 background:#0d1b2a;
 color:white;
@@ -78,6 +90,33 @@ text-decoration:none;
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
 
+/* MOBILE FIX */
+@media (max-width:768px){
+
+.menu-toggle{display:block;}
+
+nav{
+display:none;
+flex-direction:column;
+width:100%;
+background:#0d1b2a;
+margin-top:10px;
+}
+
+nav a{
+padding:10px;
+margin:0;
+}
+
+nav.active{display:flex;}
+
+.section{padding:40px 15px;}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+}
 </style>
 
 </head>
@@ -85,9 +124,14 @@ text-decoration:none;
 <body>
 
 <header>
+
 <h1>Naveen Prasad Kuniyil</h1>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
+
+<nav id="navMenu">
 <a href="index.html">Home</a>
 <a href="index.html#about">About</a>
 <a href="services.html">Services</a>
@@ -95,6 +139,7 @@ text-decoration:none;
 <a href="germany.html">Germany / EU</a>
 <a href="contact.html">Contact</a>
 </nav>
+
 </header>
 
 <section class="section">
@@ -158,6 +203,13 @@ text-decoration:none;
 <p>© 2026 Naveen Prasad Kuniyil | IT Consultant</p>
 <p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
 </footer>
+
+<!-- MENU SCRIPT -->
+<script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>

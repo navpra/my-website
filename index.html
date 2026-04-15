@@ -6,33 +6,74 @@
 <title>Naveen Prasad Kuniyil | Healthcare IT Consultant</title>
 
 <style>
-body {margin:0;font-family:Segoe UI;background:#0b0f1a;color:#fff;}
-.container {width:90%;max-width:1200px;margin:auto;}
-h1,h2,h3{margin-bottom:15px}
-p{color:#cbd5e1;line-height:1.6}
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0b0f1a;
+  color:white;
+}
 
 /* HERO */
 .hero {
-  padding:100px 0;
-  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 10%;
   background:linear-gradient(135deg,#0b0f1a,#1e293b);
+  flex-wrap:wrap;
 }
-.hero h1 {font-size:48px;}
-.hero p {max-width:800px;margin:auto;font-size:18px;}
+
+.hero-text {
+  max-width:600px;
+}
+
+.hero h1 {
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p {
+  color:#cbd5e1;
+  font-size:18px;
+}
+
+.hero img {
+  width:260px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
 .btn {
-  background:#2563eb;
-  padding:14px 28px;
-  border-radius:8px;
-  text-decoration:none;
-  color:white;
   display:inline-block;
   margin-top:20px;
+  background:#2563eb;
+  padding:14px 26px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
 }
 
 /* SECTION */
-.section {padding:80px 0;}
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card {background:#111827;padding:20px;border-radius:10px}
+.section {
+  padding:80px 10%;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#111827;
+  padding:25px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-5px);
+}
 
 /* CONTACT */
 input,textarea {
@@ -43,7 +84,36 @@ input,textarea {
   border:none;
 }
 
-footer {background:#020617;text-align:center;padding:20px}
+/* FLOAT BUTTONS */
+.float {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float a {
+  background:#2563eb;
+  padding:14px;
+  border-radius:50%;
+  text-align:center;
+  color:white;
+  font-size:20px;
+  text-decoration:none;
+  box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+
+.whatsapp {background:#25D366;}
+.email {background:#ea4335;}
+.linkedin {background:#0A66C2;}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
 </style>
 </head>
 
@@ -51,104 +121,73 @@ footer {background:#020617;text-align:center;padding:20px}
 
 <!-- HERO -->
 <section class="hero">
-<div class="container">
-<h1>Transforming Healthcare IT Infrastructure</h1>
+<div class="hero-text">
+<h1>Enterprise Healthcare IT Consulting</h1>
 <p>
-Helping hospitals and enterprises design secure, scalable, and compliant IT environments.
-Specialized in healthcare systems, cybersecurity, and digital transformation.
+I help hospitals and organizations build secure, scalable, and compliant IT infrastructures.
+Over 20+ years of experience with global healthcare systems and enterprise environments.
 </p>
-<a href="#contact" class="btn">Request Consultation</a>
+<a href="#contact" class="btn">Start a Conversation</a>
 </div>
+
+<img src="your-photo.jpg" alt="Naveen">
 </section>
 
 <!-- ABOUT -->
 <section class="section">
-<div class="container">
-<h2>About</h2>
+<h2>About Me</h2>
 <p>
-I am Naveen Prasad Kuniyil, an experienced IT Manager and Consultant with over 20 years of IT expertise,
-including more than 15 years in international healthcare IT leadership.
+IT Manager at Al-Hayat Medical Center Group, Doha. Specialized in healthcare IT transformation,
+cybersecurity, and multi-branch infrastructure design.
 </p>
-<p>
-Currently leading IT operations at Al-Hayat Medical Center Group (Doha, Qatar), I have successfully delivered
-multi-branch healthcare IT projects, secure infrastructure deployments, and compliance-driven implementations.
-</p>
-</div>
 </section>
 
 <!-- EXPERTISE -->
 <section class="section">
-<div class="container">
 <h2>Core Expertise</h2>
 <div class="grid">
-<div class="card">Healthcare IT (HMS, JCI, eHealth)</div>
-<div class="card">Cybersecurity (Palo Alto, EDR, Firewalls)</div>
-<div class="card">Infrastructure (Windows Server, Hyper-V)</div>
+<div class="card">Healthcare IT (HMS, JCI)</div>
+<div class="card">Cybersecurity (Palo Alto, EDR)</div>
+<div class="card">Infrastructure (Windows, Hyper-V)</div>
 <div class="card">Cloud & Microsoft 365</div>
-<div class="card">Multi-branch Network Design</div>
-<div class="card">IT Strategy & Consulting</div>
-</div>
 </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- TRUST -->
 <section class="section">
-<div class="container">
-<h2>Key Achievements</h2>
+<h2>Why Clients Trust Me</h2>
 <div class="grid">
-<div class="card">Successfully deployed Hospital Management Systems across multiple branches</div>
-<div class="card">Supported Joint Commission International (JCI) accreditation</div>
-<div class="card">Aligned IT systems with Qatar eHealth initiatives</div>
-<div class="card">Delivered secure infrastructure for healthcare and financial institutions</div>
-</div>
-</div>
-</section>
-
-<!-- CONSULTING -->
-<section class="section">
-<div class="container">
-<h2>Consulting Services</h2>
-<div class="grid">
-<div class="card">
-<h3>IT Infrastructure Design</h3>
-<p>Secure and scalable enterprise architecture.</p>
-</div>
-<div class="card">
-<h3>Cybersecurity</h3>
-<p>End-to-end protection with enterprise firewalls and EDR.</p>
-</div>
-<div class="card">
-<h3>Healthcare IT Consulting</h3>
-<p>Compliance, HMS, and digital transformation.</p>
-</div>
-<div class="card">
-<h3>IT Audit & Optimization</h3>
-<p>Improve performance, security, and cost efficiency.</p>
-</div>
-</div>
+<div class="card">✔ 20+ Years Experience</div>
+<div class="card">✔ 30+ Projects Delivered</div>
+<div class="card">✔ Healthcare Specialist</div>
+<div class="card">✔ International Leadership</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
-<div class="container">
 <h2>Contact</h2>
 
 <form id="contactForm">
-<input type="text" placeholder="Your Name" id="name" required>
-<input type="email" placeholder="Your Email" id="email" required>
-<textarea placeholder="Your Message" id="message" required></textarea>
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" required></textarea>
 <button class="btn" type="submit">Send Message</button>
 </form>
 
 <p id="status"></p>
-
-</div>
 </section>
 
 <footer>
-© 2026 Naveen Prasad Kuniyil | IT Consultant | naveenindia.com
+© 2026 Naveen Prasad Kuniyil | naveenindia.com
 </footer>
+
+<!-- FLOAT CONTACT -->
+<div class="float">
+<a class="whatsapp" href="https://wa.me/974XXXXXXXX" target="_blank">💬</a>
+<a class="email" href="mailto:nav_pra@outlook.com">✉️</a>
+<a class="linkedin" href="https://linkedin.com/in/YOURPROFILE" target="_blank">in</a>
+</div>
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){

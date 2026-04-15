@@ -2,49 +2,52 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact | Naveen Prasad</title>
+<title>Contact</title>
 
 <style>
 body{font-family:Poppins;background:#f5f7fb;margin:0;}
-.container{max-width:600px;margin:auto;padding:40px;}
-input,textarea{width:100%;padding:10px;margin:10px 0;border-radius:5px;border:1px solid #ccc;}
-.btn{background:#00b4d8;color:white;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;}
+header{background:#0d1b2a;color:white;padding:20px;}
+nav a{color:white;margin-right:15px;}
+
+.container{padding:40px;max-width:600px;margin:auto;}
+input,textarea{width:100%;padding:10px;margin:10px 0;}
 </style>
 </head>
 
 <body>
 
+<header>
+<h2>Naveen Prasad</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="germany.html">Germany / EU</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
 <div class="container">
 
 <h1>Contact</h1>
 
-<form id="contactForm">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" placeholder="Message" required></textarea>
-<button class="btn">Send Message</button>
+<form>
+<input placeholder="Name">
+<input placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button>Send</button>
 </form>
 
-<p id="status"></p>
-
-<br><br>
-
-<h2>Or Book Directly</h2>
+<h2>Book Consultation</h2>
 
 <iframe src="https://calendly.com/naveenprasad-naveen/30min"
 width="100%" height="600"></iframe>
 
 </div>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(e){
-e.preventDefault();
-
-await fetch("https://contact-form.naveenprasad-naveen.workers.dev",{method:"POST"});
-
-document.getElementById("status").innerText="Message sent successfully!";
-});
-</script>
+<footer>
+<p>© 2026 Naveen Prasad</p>
+</footer>
 
 </body>
 </html>

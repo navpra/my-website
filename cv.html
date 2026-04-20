@@ -43,6 +43,7 @@ gap:15px;
 .brand{
 font-size:24px;
 font-weight:700;
+white-space:nowrap;
 }
 
 .header-right{
@@ -54,6 +55,7 @@ margin-left:auto;
 
 nav{
 display:flex;
+align-items:center;
 gap:18px;
 }
 
@@ -62,10 +64,31 @@ color:#fff;
 text-decoration:none;
 font-size:15px;
 font-weight:500;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#00b4d8;
+}
+
+.lang-switch{
+display:flex;
+gap:6px;
+}
+
+.lang-switch button{
+background:transparent;
+border:1px solid #fff;
+color:#fff;
+padding:6px 10px;
+border-radius:20px;
+cursor:pointer;
+font-size:13px;
+}
+
+.lang-switch button:hover{
+background:#fff;
+color:#0d1b2a;
 }
 
 .menu-toggle{
@@ -118,6 +141,7 @@ text-decoration:none;
 border-radius:30px;
 font-weight:600;
 margin:8px;
+transition:0.3s;
 }
 
 .btn:hover{
@@ -246,6 +270,12 @@ display:flex;
 nav a{
 padding:10px;
 text-align:center;
+width:100%;
+}
+
+.lang-switch{
+margin-top:10px;
+justify-content:center;
 }
 
 .hero{
@@ -263,6 +293,12 @@ font-size:17px;
 .section{
 padding:40px 15px;
 }
+}
+
+/* RTL */
+body[dir="rtl"]{
+direction:rtl;
+text-align:right;
 }
 </style>
 
@@ -287,6 +323,12 @@ padding:40px 15px;
 <a href="germany.html">Germany / EU</a>
 <a href="contact.html">Contact</a>
 </nav>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
 
 </div>
 
@@ -320,7 +362,7 @@ driving secure growth, digital transformation, and operational excellence.
 Experienced IT Manager currently leading technology operations at Al-Hayat Medical Center Group, Qatar.
 Strong background in healthcare IT, enterprise infrastructure, cybersecurity, cloud modernization,
 vendor management, budgeting, and multi-site operations. Proven record of aligning technology
-with business and clinical objectives. :contentReference[oaicite:0]{index=0}
+with business and clinical objectives.
 </div>
 
 </section>
@@ -346,7 +388,7 @@ with business and clinical objectives. :contentReference[oaicite:0]{index=0}
 <div class="card">
 <h3>Infrastructure</h3>
 <ul>
-<li>Windows Server 2000–2025</li>
+<li>Windows Server</li>
 <li>Hyper-V / VMware</li>
 <li>Microsoft 365 / Azure</li>
 <li>Backup & DR</li>
@@ -390,59 +432,19 @@ with business and clinical objectives. :contentReference[oaicite:0]{index=0}
 <div class="item">
 <h3>IT Manager — Al-Hayat Medical Center Group, Qatar</h3>
 <p>2009 – Present</p>
-<p>
-Leading IT operations, infrastructure modernization, cybersecurity, cloud backup,
-service delivery, vendor governance, and branch technology alignment. Supported JCI
-accreditation initiatives and digital health programs. :contentReference[oaicite:1]{index=1}
-</p>
+<p>Leading IT operations, cybersecurity, cloud backup, vendor governance, and digital transformation.</p>
 </div>
 
 <div class="item">
 <h3>Independent IT Consultant — Qatar / GCC</h3>
 <p>2010 – Present</p>
-<p>
-Delivered 30+ consulting projects for hospitals, clinics, exchanges, factories, and SMBs.
-Designed secure, scalable, cost-efficient IT systems. 
-</p>
+<p>Delivered consulting projects for hospitals, clinics, factories, exchanges, and SMB clients.</p>
 </div>
 
 <div class="item">
-<h3>Senior Technical Support Engineer — Microsoft Process</h3>
-<p>Aditya Birla Minacs | 2005 – 2008</p>
-<p>
-Provided advanced support to North American clients and earned multiple performance awards. :contentReference[oaicite:3]{index=3}
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- KEY PROJECTS -->
-<section class="section">
-
-<h2>Key Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>17 Branch Integration</h3>
-<p>Unified servers, networks, and backup systems across healthcare branches.</p>
-</div>
-
-<div class="card">
-<h3>Security Modernization</h3>
-<p>Implemented enterprise firewall and endpoint security architecture.</p>
-</div>
-
-<div class="card">
-<h3>Backup Transformation</h3>
-<p>Centralized Veritas-based continuity and recovery systems.</p>
-</div>
-
-<div class="card">
-<h3>Digital Health Enablement</h3>
-<p>Supported healthcare systems aligned with Qatar eHealth standards.</p>
+<h3>Senior Technical Support Engineer</h3>
+<p>2005 – 2008</p>
+<p>Provided advanced support to North American clients and earned multiple awards.</p>
 </div>
 
 </div>
@@ -456,13 +458,12 @@ Provided advanced support to North American clients and earned multiple performa
 
 <div class="card">
 <ul>
-<li>Bachelor of Commerce — University of Calicut</li>
+<li>Bachelor of Commerce</li>
 <li>CCNA</li>
-<li>MCSA Messaging</li>
+<li>MCSA</li>
 <li>MCSE</li>
 <li>RHCE</li>
 <li>A+ / N+</li>
-<li>Diploma in Software Engineering</li>
 </ul>
 </div>
 
@@ -487,7 +488,7 @@ Healthcare IT leadership, and strategic consulting opportunities across GCC / Eu
 <!-- FLOAT ICONS -->
 <div class="float-icons">
 
-<a href="https://wa.me/97433990879?text=Hello%20I%20would%20like%20to%20discuss%20your%20profile" target="_blank" class="whatsapp">
+<a href="https://wa.me/97433990879" target="_blank" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -506,11 +507,36 @@ Healthcare IT leadership, and strategic consulting opportunities across GCC / Eu
 <p>Executive IT Leadership | Healthcare IT | Cybersecurity | Infrastructure</p>
 </footer>
 
+<!-- TRANSLATE -->
+<div id="google_translate_element" style="display:none;"></div>
+
 <script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en'},
+'google_translate_element'
+);
+}
+
+function setLang(lang){
+const interval=setInterval(()=>{
+const select=document.querySelector(".goog-te-combo");
+if(select){
+select.value=lang;
+select.dispatchEvent(new Event("change"));
+clearInterval(interval);
+}
+},300);
+
+document.body.dir=(lang==="ar")?"rtl":"ltr";
+}
+
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
 </script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

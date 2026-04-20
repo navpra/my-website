@@ -22,9 +22,23 @@ font-family:Poppins,sans-serif;
 body{
 background:#f5f7fb;
 color:#222;
-line-height:1.7;
+line-height:1.6;
+overflow-x:hidden;
+top:0 !important;
 }
 
+/* GOOGLE TRANSLATE HIDE FIX */
+.goog-te-banner-frame,
+.skiptranslate,
+.goog-te-gadget,
+.goog-te-combo,
+.goog-logo-link,
+.goog-te-balloon-frame,
+#google_translate_element{
+display:none !important;
+}
+
+/* HEADER */
 header{
 background:#0d1b2a;
 color:#fff;
@@ -33,7 +47,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
+gap:15px;
 }
 
 .brand{

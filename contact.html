@@ -12,15 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- GOOGLE ANALYTICS -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91E7ZZQW8B"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-91E7ZZQW8B');
-</script>
-
 <style>
 *{
 margin:0;
@@ -58,12 +49,22 @@ justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
 gap:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .brand{
-font-size:24px;
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
 font-weight:700;
 white-space:nowrap;
+}
+
+.brand img{
+height:34px;
+width:auto;
+display:block;
 }
 
 .header-right{
@@ -84,7 +85,7 @@ color:#fff;
 text-decoration:none;
 font-weight:500;
 font-size:15px;
-transition:0.3s;
+transition:.3s;
 }
 
 nav a:hover{
@@ -148,7 +149,7 @@ margin:auto;
 background:#fff;
 padding:28px;
 border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .contact-form input,
@@ -177,7 +178,7 @@ font-weight:600;
 border:none;
 cursor:pointer;
 width:100%;
-transition:0.3s;
+transition:.3s;
 }
 
 .btn:hover{
@@ -204,7 +205,7 @@ height:650px;
 border:none;
 border-radius:12px;
 background:#fff;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 /* FLOAT ICONS */
@@ -228,7 +229,7 @@ border-radius:50%;
 color:#fff;
 font-size:20px;
 text-decoration:none;
-box-shadow:0 6px 15px rgba(0,0,0,0.18);
+box-shadow:0 6px 15px rgba(0,0,0,.18);
 }
 
 .whatsapp{background:#25D366;}
@@ -296,6 +297,14 @@ padding:40px 15px;
 iframe{
 height:520px;
 }
+
+.brand{
+font-size:18px;
+}
+
+.brand img{
+height:28px;
+}
 }
 
 /* RTL */
@@ -311,7 +320,10 @@ text-align:right;
 
 <header>
 
-<div class="brand">Naveen Prasad Kuniyil</div>
+<div class="brand">
+<img src="naveenindia_logo.png" alt="Logo">
+<span>Naveen Prasad Kuniyil</span>
+</div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
 <i class="fas fa-bars"></i>
@@ -338,19 +350,14 @@ text-align:right;
 
 </header>
 
-<!-- HERO -->
 <section class="hero">
-
 <h1>Contact Me</h1>
-
 <p>
 Let’s discuss your IT requirements, business challenges,
 and technology solutions.
 </p>
-
 </section>
 
-<!-- CONTACT SECTION -->
 <section class="section">
 
 <div class="contact-form">
@@ -358,9 +365,7 @@ and technology solutions.
 <form id="contactForm">
 
 <input type="text" id="name" placeholder="Your Name" required>
-
 <input type="email" id="email" placeholder="Your Email" required>
-
 <textarea id="message" placeholder="Tell me about your requirement" required></textarea>
 
 <button class="btn">Send Message</button>
@@ -377,7 +382,6 @@ and technology solutions.
 
 </section>
 
-<!-- FLOAT ICONS -->
 <div class="float-icons">
 
 <a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" target="_blank" class="whatsapp">
@@ -404,8 +408,7 @@ and technology solutions.
 </p>
 </footer>
 
-<!-- TRANSLATE -->
-<div id="google_translate_element" style="display:none;"></div>
+<div id="google_translate_element"></div>
 
 <script>
 function googleTranslateElementInit(){
@@ -435,21 +438,12 @@ document.getElementById("navMenu").classList.toggle("active");
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<!-- CONTACT SCRIPT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 e.preventDefault();
 
-try{
-await fetch("https://contact-form.naveenprasad-naveen.workers.dev",{
-method:"POST"
-});
-
 document.getElementById("status").innerText="Message sent successfully!";
 this.reset();
-}catch(err){
-document.getElementById("status").innerText="Unable to send message now.";
-}
 });
 </script>
 

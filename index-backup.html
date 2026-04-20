@@ -15,82 +15,304 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body{background:#f5f7fb;color:#222;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
 
+body{
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+}
+
+/* HEADER */
 header{
-background:#0d1b2a;color:#fff;padding:20px;
-display:flex;justify-content:space-between;align-items:center;
+background:#0d1b2a;
+color:#fff;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 flex-wrap:wrap;
+gap:15px;
+}
+
+.brand{
+font-size:24px;
+font-weight:700;
+white-space:nowrap;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:20px;
+margin-left:auto;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:18px;
 }
 
 nav a{
-color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
+color:#fff;
+text-decoration:none;
+font-weight:500;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00b4d8;
+}
+
+.lang-switch{
+display:flex;
+gap:6px;
+}
+
+.lang-switch button{
+background:transparent;
+border:1px solid #fff;
+color:#fff;
+padding:6px 10px;
+border-radius:20px;
+cursor:pointer;
+font-size:13px;
+}
+
+.lang-switch button:hover{
+background:#fff;
+color:#0d1b2a;
 }
 
 .menu-toggle{
-display:none;font-size:26px;cursor:pointer;color:white;
+display:none;
+font-size:26px;
+cursor:pointer;
+color:#fff;
 }
 
+/* HERO */
 .hero{
 background:linear-gradient(135deg,#1b263b,#415a77);
-color:white;padding:80px 20px;text-align:center;
+color:#fff;
+padding:80px 20px;
+text-align:center;
 }
 
 .hero img{
-width:150px;border-radius:50%;margin-bottom:20px;border:4px solid white;
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid #fff;
+margin-bottom:20px;
 }
 
-.hero h2{font-size:32px;margin-bottom:10px;}
-.hero p{max-width:700px;margin:auto;margin-bottom:20px;}
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:22px;
+font-weight:400;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:760px;
+margin:auto;
+margin-bottom:25px;
+}
 
 .btn{
-display:inline-block;padding:12px 25px;background:#00b4d8;
-color:#fff;border-radius:30px;text-decoration:none;margin:10px;
+display:inline-block;
+padding:12px 24px;
+margin:8px;
+background:#00b4d8;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
 font-weight:600;
+transition:0.3s;
 }
 
-.section{padding:60px 20px;max-width:1100px;margin:auto;}
-.section h2{text-align:center;margin-bottom:30px;}
+.btn:hover{
+background:#0096c7;
+}
 
+/* GENERAL SECTION */
+.section{
+padding:60px 20px;
+max-width:1150px;
+margin:auto;
+}
+
+.section h2{
+text-align:center;
+font-size:30px;
+margin-bottom:30px;
+color:#0d1b2a;
+}
+
+.section p.center{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:22px;
 }
 
 .card{
-background:white;padding:20px;border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+background:#fff;
+padding:24px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
-.contact input, .contact textarea{
-width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:5px;
+.card h3{
+margin-bottom:10px;
+color:#0d1b2a;
 }
 
-footer{
-background:#0d1b2a;color:white;text-align:center;padding:20px;
+/* CONTACT */
+.contact-form{
+max-width:700px;
+margin:auto;
 }
 
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin-bottom:14px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+}
+
+.contact-form textarea{
+min-height:140px;
+resize:vertical;
+}
+
+.contact-form button{
+border:none;
+cursor:pointer;
+}
+
+/* FLOAT ICONS */
 .float-icons{
-position:fixed;bottom:20px;right:20px;
-display:flex;flex-direction:column;gap:10px;
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
 }
 
 .float-icons a{
-width:50px;height:50px;display:flex;align-items:center;justify-content:center;
-border-radius:50%;color:white;font-size:20px;text-decoration:none;
+width:52px;
+height:52px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+color:#fff;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 6px 15px rgba(0,0,0,0.18);
 }
 
 .whatsapp{background:#25D366;}
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
 
-@media (max-width:768px){
-.menu-toggle{display:block;}
-nav{display:none;flex-direction:column;width:100%;background:#0d1b2a;margin-top:10px;}
-nav.active{display:flex;}
-.cards{grid-template-columns:1fr;}
+/* FOOTER */
+footer{
+background:#0d1b2a;
+color:#fff;
+text-align:center;
+padding:24px 20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+margin-left:auto;
+}
+
+.header-right{
+width:100%;
+display:block;
+}
+
+nav{
+display:none;
+flex-direction:column;
+width:100%;
+background:#0d1b2a;
+padding:10px 0;
+margin-top:10px;
+}
+
+nav.active{
+display:flex;
+}
+
+nav a{
+padding:10px;
+text-align:center;
+width:100%;
+}
+
+.lang-switch{
+margin-top:10px;
+justify-content:center;
+}
+
+.hero{
+padding:60px 15px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero h2{
+font-size:18px;
+}
+
+.section{
+padding:45px 15px;
+}
+
+.float-icons{
+bottom:15px;
+right:15px;
+}
+}
+
+/* RTL */
+body[dir="rtl"]{
+direction:rtl;
+text-align:right;
 }
 </style>
 
@@ -99,143 +321,226 @@ nav.active{display:flex;}
 <body>
 
 <header>
-<h1>Naveen Prasad Kuniyil</h1>
+
+<div class="brand">Naveen Prasad Kuniyil</div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
 <i class="fas fa-bars"></i>
 </div>
 
+<div class="header-right">
+
 <nav id="navMenu">
+<a href="index.html">Home</a>
 <a href="#about">About</a>
 <a href="services.html">Services</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="germany.html">Germany / EU</a>
 <a href="#contact">Contact</a>
 </nav>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
+
+</div>
+
 </header>
 
-<!-- HERO (UPDATED FOR CONVERSION) -->
+<!-- HERO -->
 <section class="hero">
-<img src="profile.jpg" alt="Naveen">
 
-<h2>Fix IT Issues. Secure Your Business. Scale Without Downtime.</h2>
+<img src="profile.jpg" alt="Naveen Prasad Kuniyil">
+
+<h1>Fix IT Issues. Secure Your Business.</h1>
+
+<h2>Scale Without Downtime.</h2>
 
 <p>
-Helping healthcare centers and businesses eliminate IT problems, improve security,
-and build reliable infrastructure — with 23+ years of proven experience.
+Helping healthcare centers and businesses eliminate IT problems,
+improve security, and build reliable infrastructure with 23+ years
+of proven experience.
 </p>
 
 <a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Book Free Consultation</a>
-<a href="naveen-cv.pdf" class="btn" target="_blank">Download CV</a>
+<a href="naveen-cv.pdf" target="_blank" class="btn">Download CV</a>
+<a href="germany.html" class="btn">Germany / EU Opportunities</a>
+
 </section>
 
 <!-- WHO I HELP -->
 <section class="section">
+
 <h2>Who I Help</h2>
 
 <div class="cards">
+
 <div class="card">
 <h3>Healthcare Centers</h3>
-<p>Clinics and hospitals needing secure, stable IT systems.</p>
+<p>Clinics, hospitals, and medical groups needing secure and stable IT systems.</p>
 </div>
 
 <div class="card">
 <h3>Multi-Branch Businesses</h3>
-<p>Companies struggling with network issues and downtime.</p>
+<p>Organizations facing downtime, branch connectivity issues, and poor central control.</p>
 </div>
 
 <div class="card">
 <h3>Growing Companies</h3>
-<p>Organizations needing scalable infrastructure and security.</p>
+<p>Businesses needing scalable infrastructure, cloud migration, and cybersecurity.</p>
 </div>
+
 </div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section class="section" id="about">
+
 <h2>About Me</h2>
-<p>
-IT Manager with over 23 years of experience, including 16+ years in international IT management.
-Leading IT operations at Al-Hayat Medical Center Group, managing infrastructure, cybersecurity, and digital transformation.
+
+<p class="center">
+IT Manager with over 23 years of experience including 16+ years in international IT management.
+Currently leading IT operations at Al-Hayat Medical Center Group, Qatar, managing infrastructure,
+cybersecurity, cloud systems, and digital transformation across multiple branches.
 </p>
+
 </section>
 
-<!-- TRUST -->
+<!-- WHY CHOOSE -->
 <section class="section">
+
 <h2>Why Choose Me</h2>
 
 <div class="cards">
-<div class="card"><h3>23+ Years Experience</h3></div>
-<div class="card"><h3>30+ Projects Delivered</h3></div>
-<div class="card"><h3>International Expertise</h3></div>
+
+<div class="card">
+<h3>23+ Years Experience</h3>
+<p>Hands-on leadership across healthcare, enterprise IT, and infrastructure.</p>
 </div>
+
+<div class="card">
+<h3>30+ Projects Delivered</h3>
+<p>Successful implementations, upgrades, migrations, and security improvements.</p>
+</div>
+
+<div class="card">
+<h3>International Exposure</h3>
+<p>Extensive GCC experience with multicultural teams and business environments.</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Services</h2>
+
+<h2>Core Services</h2>
 
 <div class="cards">
-<div class="card"><h3>Cybersecurity</h3></div>
-<div class="card"><h3>Healthcare IT</h3></div>
-<div class="card"><h3>Infrastructure</h3></div>
-<div class="card"><h3>Backup & DR</h3></div>
+
+<div class="card">
+<h3>Cybersecurity Consulting</h3>
+<p>Palo Alto, FortiGate, SonicWall, endpoint protection, policy hardening, risk reduction.</p>
 </div>
+
+<div class="card">
+<h3>Healthcare IT Solutions</h3>
+<p>HMS systems, insurance integration, secure clinical systems, uptime-focused operations.</p>
+</div>
+
+<div class="card">
+<h3>Infrastructure & Cloud</h3>
+<p>Servers, virtualization, Microsoft ecosystem, Azure, branch connectivity, resilience.</p>
+</div>
+
+<div class="card">
+<h3>Backup & DR</h3>
+<p>Business continuity planning, backup systems, recovery readiness, zero-data-loss strategy.</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- CASE STUDIES -->
 <section class="section">
+
 <h2>Case Studies</h2>
 
 <div class="cards">
+
 <div class="card">
 <h3>17-Branch Healthcare Network</h3>
-<p>Eliminated downtime and stabilized IT infrastructure.</p>
+<p>Stabilized infrastructure and reduced operational downtime across multiple branches.</p>
 </div>
 
 <div class="card">
 <h3>Cybersecurity Upgrade</h3>
-<p>Reduced security risks by over 90%.</p>
+<p>Implemented enterprise security stack reducing exposure and improving control.</p>
 </div>
 
 <div class="card">
-<h3>Backup System</h3>
-<p>Ensured business continuity and zero data loss.</p>
+<h3>Backup Modernization</h3>
+<p>Centralized backup and recovery systems for reliable business continuity.</p>
 </div>
+
 </div>
+
 </section>
 
-<!-- STRONG CTA -->
-<section class="section" style="text-align:center;">
+<!-- CTA -->
+<section class="section">
+
 <h2>Need Reliable IT Support?</h2>
 
-<p style="max-width:600px;margin:auto;">
-Let’s identify and fix your IT problems with a secure and scalable approach.
+<p class="center">
+Let’s identify your IT problems and solve them with a secure,
+structured, and scalable approach.
 </p>
 
-<a href="https://calendly.com/naveenprasad-naveen/30min" class="btn">
-Get IT Assessment
-</a>
+<p style="text-align:center;margin-top:20px;">
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Get IT Assessment</a>
+</p>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section contact">
+<section class="section" id="contact">
+
 <h2>Contact</h2>
 
+<div class="contact-form">
+
 <form>
-<input placeholder="Your Name">
-<input placeholder="Your Email">
-<textarea placeholder="Message"></textarea>
-<button class="btn">Send Message</button>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Tell me about your requirement"></textarea>
+<button type="submit" class="btn">Send Message</button>
 </form>
+
+</div>
 
 </section>
 
 <!-- FLOAT ICONS -->
 <div class="float-icons">
-<a href="https://wa.me/97433990879" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-<a href="mailto:naveenprasad.naveen@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
-<a href="https://www.linkedin.com/in/naveen-prasad-5967874" class="linkedin"><i class="fab fa-linkedin"></i></a>
+
+<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" target="_blank" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="mailto:naveenprasad.naveen@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/naveen-prasad-5967874" target="_blank" class="linkedin">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
 </div>
 
 <footer>
@@ -243,11 +548,36 @@ Get IT Assessment
 <p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
 </footer>
 
+<!-- TRANSLATE -->
+<div id="google_translate_element" style="display:none;"></div>
+
 <script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en'},
+'google_translate_element'
+);
+}
+
+function setLang(lang){
+const interval=setInterval(()=>{
+const select=document.querySelector(".goog-te-combo");
+if(select){
+select.value=lang;
+select.dispatchEvent(new Event("change"));
+clearInterval(interval);
+}
+},300);
+
+document.body.dir=(lang==="ar")?"rtl":"ltr";
+}
+
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
 </script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

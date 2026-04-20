@@ -6,9 +6,9 @@
 
 <title>Naveen Prasad Kuniyil | IT Consultant | Cybersecurity | Healthcare IT</title>
 
-<meta name="description" content="23+ years experienced IT Consultant specializing in Cybersecurity, Healthcare IT, Infrastructure, Cloud and Enterprise Solutions across Qatar, GCC and Europe.">
+<meta name="description" content="23+ years experienced IT Consultant specializing in Cybersecurity, Healthcare IT, Infrastructure, Cloud, and Enterprise Solutions across Qatar, GCC and Europe.">
 
-<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, Infrastructure Expert, Cloud Consultant, IT Manager Qatar, GCC IT Expert">
+<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, IT Infrastructure, Cloud Consultant, IT Manager Qatar, GCC IT Expert">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -33,17 +33,15 @@ overflow-x:hidden;
 top:0 !important;
 }
 
-/* REMOVE GOOGLE TRANSLATE TOP BAR */
+/* GOOGLE TRANSLATE HIDE FIX */
 .goog-te-banner-frame,
-.skiptranslate iframe,
-body > .skiptranslate,
+.skiptranslate,
+.goog-te-gadget,
+.goog-te-combo,
 .goog-logo-link,
-.goog-te-gadget span{
+.goog-te-balloon-frame,
+#google_translate_element{
 display:none !important;
-}
-
-.goog-te-gadget{
-font-size:0 !important;
 }
 
 /* HEADER */
@@ -67,13 +65,10 @@ align-items:center;
 gap:12px;
 font-size:24px;
 font-weight:700;
-white-space:nowrap;
 }
 
 .brand img{
-height:44px;
-width:auto;
-object-fit:contain;
+height:42px;
 }
 
 .header-right{
@@ -86,7 +81,6 @@ margin-left:auto;
 nav{
 display:flex;
 gap:18px;
-align-items:center;
 }
 
 nav a{
@@ -116,16 +110,10 @@ cursor:pointer;
 font-size:13px;
 }
 
-.lang-switch button:hover{
-background:#fff;
-color:#0d1b2a;
-}
-
 .menu-toggle{
 display:none;
 font-size:26px;
 cursor:pointer;
-color:#fff;
 }
 
 /* HERO */
@@ -137,16 +125,23 @@ text-align:center;
 }
 
 .hero-logo{
-width:240px;
-max-width:92%;
-height:auto;
+width:220px;
+margin-bottom:18px;
+}
+
+.hero-photo{
+width:165px;
+height:165px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #fff;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 margin-bottom:20px;
-filter:drop-shadow(0 12px 24px rgba(0,0,0,.25));
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .hero h2{
@@ -156,9 +151,9 @@ margin-bottom:18px;
 }
 
 .hero p{
-max-width:850px;
+max-width:800px;
 margin:auto;
-margin-bottom:28px;
+margin-bottom:25px;
 }
 
 .btn{
@@ -178,7 +173,7 @@ background:#0096c7;
 transform:translateY(-2px);
 }
 
-/* TRUST */
+/* TRUST BAR */
 .trust{
 background:#fff;
 padding:18px;
@@ -202,7 +197,7 @@ color:#0d1b2a;
 }
 
 .section p.center{
-max-width:860px;
+max-width:850px;
 margin:auto;
 text-align:center;
 }
@@ -231,7 +226,7 @@ margin-bottom:10px;
 color:#0d1b2a;
 }
 
-/* STATS */
+/* COUNTERS */
 .stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -241,7 +236,7 @@ text-align:center;
 
 .stat{
 background:#fff;
-padding:24px;
+padding:25px;
 border-radius:14px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
@@ -249,6 +244,26 @@ box-shadow:0 8px 25px rgba(0,0,0,.08);
 .stat h3{
 font-size:34px;
 color:#00b4d8;
+}
+
+/* CONTACT */
+.contact-form{
+max-width:700px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin-bottom:14px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.contact-form textarea{
+min-height:140px;
+resize:vertical;
 }
 
 /* FLOAT ICONS */
@@ -279,6 +294,7 @@ box-shadow:0 6px 15px rgba(0,0,0,.18);
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
 
+/* STICKY MOBILE CTA */
 .mobile-cta{
 display:none;
 }
@@ -333,7 +349,12 @@ padding:60px 15px;
 }
 
 .hero-logo{
-width:180px;
+width:170px;
+}
+
+.hero-photo{
+width:135px;
+height:135px;
 }
 
 .hero h1{
@@ -346,14 +367,6 @@ font-size:18px;
 
 .section{
 padding:45px 15px;
-}
-
-.brand{
-font-size:20px;
-}
-
-.brand img{
-height:36px;
 }
 
 .mobile-cta{
@@ -388,7 +401,7 @@ text-align:right;
 <header>
 
 <div class="brand">
-<img src="naveenindia_logo.png" alt="Naveen India Logo">
+<img src="naveenindia_logo.png" alt="Logo">
 <span>Naveen Prasad Kuniyil</span>
 </div>
 
@@ -399,6 +412,7 @@ text-align:right;
 <div class="header-right">
 
 <nav id="navMenu">
+<a href="index.html"><i class="fas fa-home"></i> Home</a>
 <a href="#about">About</a>
 <a href="services.html">Services</a>
 <a href="case-studies.html">Results</a>
@@ -427,7 +441,7 @@ text-align:right;
 <h2>Enterprise IT Leadership | Cybersecurity | Infrastructure</h2>
 
 <p>
-23+ years helping healthcare centers, multi-branch companies and enterprises reduce downtime, improve security, modernize infrastructure, and build resilient business technology systems.
+23+ years helping healthcare centers, multi-branch companies and enterprises reduce downtime, improve security and modernize IT operations.
 </p>
 
 <a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Book Free Strategy Call</a>
@@ -437,19 +451,36 @@ text-align:right;
 </section>
 
 <div class="trust">
-Trusted Across Healthcare • Finance • Enterprise • Qatar • GCC
+Trusted by Healthcare, Finance, Enterprise & GCC Organizations
 </div>
 
 <!-- STATS -->
 <section class="section">
 
-<h2>Proven Impact</h2>
+<h2>Results That Matter</h2>
 
 <div class="stats">
-<div class="stat"><h3>23+</h3><p>Years Experience</p></div>
-<div class="stat"><h3>30+</h3><p>Projects Delivered</p></div>
-<div class="stat"><h3>17+</h3><p>Locations Managed</p></div>
-<div class="stat"><h3>99.9%</h3><p>Uptime Focus</p></div>
+
+<div class="stat">
+<h3>23+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h3>30+</h3>
+<p>Projects Delivered</p>
+</div>
+
+<div class="stat">
+<h3>17+</h3>
+<p>Branch Networks Managed</p>
+</div>
+
+<div class="stat">
+<h3>99.9%</h3>
+<p>Business Uptime Focus</p>
+</div>
+
 </div>
 
 </section>
@@ -460,7 +491,7 @@ Trusted Across Healthcare • Finance • Enterprise • Qatar • GCC
 <h2>About Me</h2>
 
 <p class="center">
-Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with over 23 years of hands-on experience and more than 16 years in international IT management. Currently leading enterprise IT operations in Qatar across multi-branch healthcare environments.
+Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with 23+ years hands-on experience and 16+ years international leadership across Qatar and GCC.
 </p>
 
 </section>
@@ -473,75 +504,61 @@ Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security 
 <div class="cards">
 
 <div class="card">
-<h3>Cybersecurity Consulting</h3>
-<p>Palo Alto, FortiGate, SonicWall, endpoint security, zero trust, risk reduction.</p>
+<h3>Cybersecurity</h3>
+<p>Palo Alto, FortiGate, SonicWall, EDR/XDR, Risk Reduction.</p>
 </div>
 
 <div class="card">
-<h3>Infrastructure Management</h3>
-<p>Servers, virtualization, branch networks, cloud-ready architecture.</p>
+<h3>Infrastructure</h3>
+<p>Servers, Virtualization, Branch Networks, High Availability.</p>
 </div>
 
 <div class="card">
-<h3>Healthcare IT Solutions</h3>
-<p>Clinical systems, HMS, insurance integration, uptime-focused operations.</p>
+<h3>Healthcare IT</h3>
+<p>Clinical Systems, HMS, Insurance Integration, Secure Operations.</p>
 </div>
 
 <div class="card">
-<h3>Microsoft 365 & Azure</h3>
-<p>Cloud migration, identity security, collaboration systems.</p>
+<h3>Cloud & Microsoft 365</h3>
+<p>Azure, Collaboration, Email Security, Hybrid Cloud.</p>
 </div>
 
 <div class="card">
-<h3>Backup & Disaster Recovery</h3>
-<p>Business continuity, recovery planning, data resilience.</p>
+<h3>Backup & DR</h3>
+<p>Business Continuity, Recovery Readiness, Data Protection.</p>
 </div>
 
 <div class="card">
-<h3>IT Leadership & Governance</h3>
-<p>Vendor management, SLA control, IT policy and optimization.</p>
+<h3>IT Leadership</h3>
+<p>Vendor Governance, SLA, Policy, IT Transformation.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- INDUSTRIES -->
-<section class="section">
-
-<h2>Industries Served</h2>
-
-<div class="cards">
-<div class="card"><h3>Healthcare</h3><p>Hospitals, clinics, medical groups.</p></div>
-<div class="card"><h3>Finance</h3><p>Secure regulated environments.</p></div>
-<div class="card"><h3>Manufacturing</h3><p>Reliable operations systems.</p></div>
-<div class="card"><h3>SMBs & Enterprise</h3><p>Growth-focused business IT.</p></div>
-</div>
-
-</section>
-
-<!-- RESULTS -->
-<section class="section">
-
-<h2>Selected Results</h2>
-
-<div class="cards">
-<div class="card"><h3>17-Branch Healthcare Network</h3><p>Stabilized infrastructure and improved multi-site uptime.</p></div>
-<div class="card"><h3>Cybersecurity Enhancement</h3><p>Centralized protection and stronger security posture.</p></div>
-<div class="card"><h3>Backup Modernization</h3><p>Reliable recovery systems for mission-critical operations.</p></div>
-</div>
-
-</section>
-
-<!-- WHY -->
+<!-- WHY CHOOSE -->
 <section class="section">
 
 <h2>Why Work With Me</h2>
 
 <div class="cards">
-<div class="card"><h3>Executive Thinking</h3><p>Technology aligned to business outcomes.</p></div>
-<div class="card"><h3>Hands-On Delivery</h3><p>Strategy plus real implementation expertise.</p></div>
-<div class="card"><h3>Trusted Experience</h3><p>Healthcare, finance, enterprise and regulated sectors.</p></div>
+
+<div class="card">
+<h3>Executive Thinking</h3>
+<p>Technology aligned with business growth.</p>
+</div>
+
+<div class="card">
+<h3>Hands-On Delivery</h3>
+<p>Strategy + execution from one expert source.</p>
+</div>
+
+<div class="card">
+<h3>Trusted Experience</h3>
+<p>Healthcare, finance, enterprise and regulated sectors.</p>
+</div>
+
 </div>
 
 </section>
@@ -552,7 +569,7 @@ Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security 
 <h2>Need Reliable IT Leadership?</h2>
 
 <p class="center">
-Let’s discuss how to secure your systems, reduce downtime and modernize your business technology.
+Let’s discuss how to secure your systems, reduce downtime and modernize your business IT.
 </p>
 
 <p style="text-align:center;margin-top:20px;">
@@ -585,6 +602,11 @@ Let’s discuss how to secure your systems, reduce downtime and modernize your b
 <footer>
 <p>© 2026 Naveen Prasad Kuniyil</p>
 <p>Cybersecurity | Infrastructure | Healthcare IT | Qatar | GCC | Europe</p>
+
+<p style="margin-top:10px;">
+<a href="privacy.html" style="color:#fff;text-decoration:none;">Privacy Policy</a> |
+<a href="terms.html" style="color:#fff;text-decoration:none;">Terms & Conditions</a>
+</p>
 </footer>
 
 <div id="google_translate_element" style="display:none;"></div>
@@ -592,7 +614,7 @@ Let’s discuss how to secure your systems, reduce downtime and modernize your b
 <script>
 function googleTranslateElementInit(){
 new google.translate.TranslateElement(
-{pageLanguage:'en', autoDisplay:false},
+{pageLanguage:'en'},
 'google_translate_element'
 );
 }

@@ -28,7 +28,6 @@ color:#222;
 line-height:1.6;
 }
 
-/* HEADER */
 header{
 background:#0d1b2a;
 color:#fff;
@@ -41,9 +40,18 @@ gap:15px;
 }
 
 .brand{
+display:flex;
+align-items:center;
+gap:12px;
 font-size:24px;
 font-weight:700;
 white-space:nowrap;
+}
+
+.brand img{
+height:42px;
+width:auto;
+object-fit:contain;
 }
 
 .header-right{
@@ -107,12 +115,12 @@ text-align:center;
 }
 
 .hero img{
-width:160px;
-height:160px;
-object-fit:cover;
-border-radius:50%;
-border:4px solid #fff;
-margin-bottom:20px;
+width:240px;
+max-width:92%;
+height:auto;
+object-fit:contain;
+margin-bottom:25px;
+filter:drop-shadow(0 12px 24px rgba(0,0,0,0.25));
 }
 
 .hero h1{
@@ -146,9 +154,9 @@ transition:0.3s;
 
 .btn:hover{
 background:#0096c7;
+transform:translateY(-2px);
 }
 
-/* GENERAL SECTION */
 .section{
 padding:60px 20px;
 max-width:1150px;
@@ -168,7 +176,6 @@ margin:auto;
 text-align:center;
 }
 
-/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -180,6 +187,12 @@ background:#fff;
 padding:24px;
 border-radius:14px;
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
 }
 
 .card h3{
@@ -187,7 +200,6 @@ margin-bottom:10px;
 color:#0d1b2a;
 }
 
-/* CONTACT */
 .contact-form{
 max-width:700px;
 margin:auto;
@@ -213,7 +225,6 @@ border:none;
 cursor:pointer;
 }
 
-/* FLOAT ICONS */
 .float-icons{
 position:fixed;
 bottom:20px;
@@ -241,7 +252,6 @@ box-shadow:0 6px 15px rgba(0,0,0,0.18);
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
 
-/* FOOTER */
 footer{
 background:#0d1b2a;
 color:#fff;
@@ -250,7 +260,6 @@ padding:24px 20px;
 margin-top:40px;
 }
 
-/* MOBILE */
 @media(max-width:768px){
 
 .menu-toggle{
@@ -291,6 +300,10 @@ justify-content:center;
 padding:60px 15px;
 }
 
+.hero img{
+width:180px;
+}
+
 .hero h1{
 font-size:28px;
 }
@@ -307,9 +320,16 @@ padding:45px 15px;
 bottom:15px;
 right:15px;
 }
+
+.brand{
+font-size:20px;
 }
 
-/* RTL */
+.brand img{
+height:34px;
+}
+}
+
 body[dir="rtl"]{
 direction:rtl;
 text-align:right;
@@ -322,7 +342,10 @@ text-align:right;
 
 <header>
 
-<div class="brand">Naveen Prasad Kuniyil</div>
+<div class="brand">
+<img src="naveenindia_logo.png" alt="Naveen India Logo">
+<span>Naveen Prasad Kuniyil</span>
+</div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
 <i class="fas fa-bars"></i>
@@ -352,7 +375,7 @@ text-align:right;
 <!-- HERO -->
 <section class="hero">
 
-<img src="profile.jpg" alt="Naveen Prasad Kuniyil">
+<img src="naveenindia_logo.png" alt="Naveen India Logo">
 
 <h1>Fix IT Issues. Secure Your Business.</h1>
 
@@ -364,9 +387,9 @@ improve security, and build reliable infrastructure with 23+ years
 of proven experience.
 </p>
 
-<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Book Free Consultation</a>
-<a href="naveen-cv.pdf" target="_blank" class="btn">Download CV</a>
-<a href="germany.html" class="btn">Germany / EU Opportunities</a>
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Schedule Strategy Call</a>
+<a href="cv.html" class="btn">View Professional Profile</a>
+<a href="germany.html" class="btn">Explore EU Opportunities</a>
 
 </section>
 
@@ -548,7 +571,6 @@ structured, and scalable approach.
 <p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
 </footer>
 
-<!-- TRANSLATE -->
 <div id="google_translate_element" style="display:none;"></div>
 
 <script>

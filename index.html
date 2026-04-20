@@ -8,8 +8,6 @@
 
 <meta name="description" content="23+ years experienced IT Consultant specializing in Cybersecurity, Healthcare IT, Infrastructure, Cloud and Enterprise Solutions across Qatar, GCC and Europe.">
 
-<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, Infrastructure Expert, Cloud Consultant, IT Manager Qatar, GCC IT Expert">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -33,7 +31,7 @@ overflow-x:hidden;
 top:0 !important;
 }
 
-/* REMOVE GOOGLE TRANSLATE TOP BAR */
+/* REMOVE GOOGLE BAR */
 .goog-te-banner-frame,
 .skiptranslate iframe,
 body > .skiptranslate,
@@ -72,8 +70,6 @@ white-space:nowrap;
 
 .brand img{
 height:44px;
-width:auto;
-object-fit:contain;
 }
 
 .header-right{
@@ -99,6 +95,19 @@ transition:.3s;
 
 nav a:hover{
 color:#00b4d8;
+}
+
+/* HOME BUTTON */
+.home-btn{
+background:#00b4d8;
+padding:8px 14px;
+border-radius:25px;
+font-weight:600;
+}
+
+.home-btn:hover{
+background:#0096c7;
+color:#fff;
 }
 
 .lang-switch{
@@ -137,11 +146,9 @@ text-align:center;
 }
 
 .hero-logo{
-width:240px;
-max-width:92%;
-height:auto;
+width:220px;
+max-width:90%;
 margin-bottom:20px;
-filter:drop-shadow(0 12px 24px rgba(0,0,0,.25));
 }
 
 .hero h1{
@@ -178,15 +185,6 @@ background:#0096c7;
 transform:translateY(-2px);
 }
 
-/* TRUST */
-.trust{
-background:#fff;
-padding:18px;
-text-align:center;
-font-weight:600;
-box-shadow:0 4px 12px rgba(0,0,0,.05);
-}
-
 /* SECTION */
 .section{
 padding:65px 20px;
@@ -201,12 +199,6 @@ margin-bottom:30px;
 color:#0d1b2a;
 }
 
-.section p.center{
-max-width:860px;
-margin:auto;
-text-align:center;
-}
-
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -218,72 +210,8 @@ background:#fff;
 padding:24px;
 border-radius:14px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
-transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 14px 30px rgba(0,0,0,.12);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#0d1b2a;
-}
-
-/* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.stat{
-background:#fff;
-padding:24px;
-border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.stat h3{
-font-size:34px;
-color:#00b4d8;
-}
-
-/* FLOAT ICONS */
-.float-icons{
-position:fixed;
-bottom:20px;
-right:20px;
-display:flex;
-flex-direction:column;
-gap:10px;
-z-index:999;
-}
-
-.float-icons a{
-width:52px;
-height:52px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-color:#fff;
-font-size:20px;
-text-decoration:none;
-box-shadow:0 6px 15px rgba(0,0,0,.18);
-}
-
-.whatsapp{background:#25D366;}
-.email{background:#0077b5;}
-.linkedin{background:#0A66C2;}
-
-.mobile-cta{
-display:none;
-}
-
-/* FOOTER */
 footer{
 background:#0d1b2a;
 color:#fff;
@@ -327,52 +255,6 @@ text-align:center;
 margin-top:10px;
 justify-content:center;
 }
-
-.hero{
-padding:60px 15px;
-}
-
-.hero-logo{
-width:180px;
-}
-
-.hero h1{
-font-size:28px;
-}
-
-.hero h2{
-font-size:18px;
-}
-
-.section{
-padding:45px 15px;
-}
-
-.brand{
-font-size:20px;
-}
-
-.brand img{
-height:36px;
-}
-
-.mobile-cta{
-display:block;
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:#00b4d8;
-text-align:center;
-padding:12px;
-z-index:999;
-}
-
-.mobile-cta a{
-color:#fff;
-font-weight:700;
-text-decoration:none;
-}
 }
 
 body[dir="rtl"]{
@@ -380,7 +262,6 @@ direction:rtl;
 text-align:right;
 }
 </style>
-
 </head>
 
 <body>
@@ -388,7 +269,7 @@ text-align:right;
 <header>
 
 <div class="brand">
-<img src="naveenindia_logo.png" alt="Naveen India Logo">
+<img src="naveenindia_logo.png" alt="Logo">
 <span>Naveen Prasad Kuniyil</span>
 </div>
 
@@ -399,12 +280,15 @@ text-align:right;
 <div class="header-right">
 
 <nav id="navMenu">
+
+<a href="index.html" class="home-btn"><i class="fas fa-home"></i> Home</a>
 <a href="#about">About</a>
 <a href="services.html">Services</a>
 <a href="case-studies.html">Results</a>
 <a href="cv.html">Profile</a>
 <a href="germany.html">Germany / EU</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 <div class="lang-switch">
@@ -420,7 +304,7 @@ text-align:right;
 <!-- HERO -->
 <section class="hero">
 
-<img src="naveenindia_logo.png" class="hero-logo" alt="Logo">
+<img src="naveenindia_logo.png" class="hero-logo">
 
 <h1>Secure. Scale. Succeed.</h1>
 
@@ -436,151 +320,25 @@ text-align:right;
 
 </section>
 
-<div class="trust">
-Trusted Across Healthcare • Finance • Enterprise • Qatar • GCC
-</div>
-
-<!-- STATS -->
-<section class="section">
-
-<h2>Proven Impact</h2>
-
-<div class="stats">
-<div class="stat"><h3>23+</h3><p>Years Experience</p></div>
-<div class="stat"><h3>30+</h3><p>Projects Delivered</p></div>
-<div class="stat"><h3>17+</h3><p>Locations Managed</p></div>
-<div class="stat"><h3>99.9%</h3><p>Uptime Focus</p></div>
-</div>
-
-</section>
-
-<!-- ABOUT -->
 <section class="section" id="about">
 
 <h2>About Me</h2>
 
-<p class="center">
-Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with over 23 years of hands-on experience and more than 16 years in international IT management. Currently leading enterprise IT operations in Qatar across multi-branch healthcare environments.
-</p>
-
-</section>
-
-<!-- SERVICES -->
-<section class="section">
-
-<h2>Core Services</h2>
-
-<div class="cards">
-
 <div class="card">
-<h3>Cybersecurity Consulting</h3>
-<p>Palo Alto, FortiGate, SonicWall, endpoint security, zero trust, risk reduction.</p>
-</div>
-
-<div class="card">
-<h3>Infrastructure Management</h3>
-<p>Servers, virtualization, branch networks, cloud-ready architecture.</p>
-</div>
-
-<div class="card">
-<h3>Healthcare IT Solutions</h3>
-<p>Clinical systems, HMS, insurance integration, uptime-focused operations.</p>
-</div>
-
-<div class="card">
-<h3>Microsoft 365 & Azure</h3>
-<p>Cloud migration, identity security, collaboration systems.</p>
-</div>
-
-<div class="card">
-<h3>Backup & Disaster Recovery</h3>
-<p>Business continuity, recovery planning, data resilience.</p>
-</div>
-
-<div class="card">
-<h3>IT Leadership & Governance</h3>
-<p>Vendor management, SLA control, IT policy and optimization.</p>
-</div>
-
+Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with over 23 years of hands-on experience and more than 16 years in international IT management.
 </div>
 
 </section>
 
-<!-- INDUSTRIES -->
-<section class="section">
-
-<h2>Industries Served</h2>
-
-<div class="cards">
-<div class="card"><h3>Healthcare</h3><p>Hospitals, clinics, medical groups.</p></div>
-<div class="card"><h3>Finance</h3><p>Secure regulated environments.</p></div>
-<div class="card"><h3>Manufacturing</h3><p>Reliable operations systems.</p></div>
-<div class="card"><h3>SMBs & Enterprise</h3><p>Growth-focused business IT.</p></div>
-</div>
-
-</section>
-
-<!-- RESULTS -->
-<section class="section">
-
-<h2>Selected Results</h2>
-
-<div class="cards">
-<div class="card"><h3>17-Branch Healthcare Network</h3><p>Stabilized infrastructure and improved multi-site uptime.</p></div>
-<div class="card"><h3>Cybersecurity Enhancement</h3><p>Centralized protection and stronger security posture.</p></div>
-<div class="card"><h3>Backup Modernization</h3><p>Reliable recovery systems for mission-critical operations.</p></div>
-</div>
-
-</section>
-
-<!-- WHY -->
-<section class="section">
-
-<h2>Why Work With Me</h2>
-
-<div class="cards">
-<div class="card"><h3>Executive Thinking</h3><p>Technology aligned to business outcomes.</p></div>
-<div class="card"><h3>Hands-On Delivery</h3><p>Strategy plus real implementation expertise.</p></div>
-<div class="card"><h3>Trusted Experience</h3><p>Healthcare, finance, enterprise and regulated sectors.</p></div>
-</div>
-
-</section>
-
-<!-- CTA -->
 <section class="section" id="contact">
 
 <h2>Need Reliable IT Leadership?</h2>
 
-<p class="center">
+<div class="card">
 Let’s discuss how to secure your systems, reduce downtime and modernize your business technology.
-</p>
-
-<p style="text-align:center;margin-top:20px;">
-<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Schedule Consultation</a>
-</p>
+</div>
 
 </section>
-
-<!-- FLOAT ICONS -->
-<div class="float-icons">
-
-<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" class="whatsapp" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="mailto:naveenprasad.naveen@gmail.com" class="email">
-<i class="fas fa-envelope"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/naveen-prasad-5967874" class="linkedin" target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
-</div>
-
-<div class="mobile-cta">
-<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank">Book Free Call</a>
-</div>
 
 <footer>
 <p>© 2026 Naveen Prasad Kuniyil</p>

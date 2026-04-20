@@ -6,7 +6,9 @@
 
 <title>Naveen Prasad Kuniyil | IT Consultant | Cybersecurity | Healthcare IT</title>
 
-<meta name="description" content="23+ years experienced IT Consultant specializing in Cybersecurity, Healthcare IT, Infrastructure, Cloud and Enterprise Solutions across Qatar, GCC and Europe.">
+<meta name="description" content="23+ years experienced IT Consultant specializing in Cybersecurity, Healthcare IT, Infrastructure, Cloud, and Enterprise Solutions across Qatar, GCC and Europe.">
+
+<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, IT Infrastructure, Cloud Consultant, IT Manager Qatar, GCC IT Expert">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -28,20 +30,6 @@ background:#f5f7fb;
 color:#222;
 line-height:1.6;
 overflow-x:hidden;
-top:0 !important;
-}
-
-/* REMOVE GOOGLE BAR */
-.goog-te-banner-frame,
-.skiptranslate iframe,
-body > .skiptranslate,
-.goog-logo-link,
-.goog-te-gadget span{
-display:none !important;
-}
-
-.goog-te-gadget{
-font-size:0 !important;
 }
 
 /* HEADER */
@@ -65,11 +53,10 @@ align-items:center;
 gap:12px;
 font-size:24px;
 font-weight:700;
-white-space:nowrap;
 }
 
 .brand img{
-height:44px;
+height:42px;
 }
 
 .header-right{
@@ -82,7 +69,6 @@ margin-left:auto;
 nav{
 display:flex;
 gap:18px;
-align-items:center;
 }
 
 nav a{
@@ -95,19 +81,6 @@ transition:.3s;
 
 nav a:hover{
 color:#00b4d8;
-}
-
-/* HOME BUTTON */
-.home-btn{
-background:#00b4d8;
-padding:8px 14px;
-border-radius:25px;
-font-weight:600;
-}
-
-.home-btn:hover{
-background:#0096c7;
-color:#fff;
 }
 
 .lang-switch{
@@ -125,16 +98,10 @@ cursor:pointer;
 font-size:13px;
 }
 
-.lang-switch button:hover{
-background:#fff;
-color:#0d1b2a;
-}
-
 .menu-toggle{
 display:none;
 font-size:26px;
 cursor:pointer;
-color:#fff;
 }
 
 /* HERO */
@@ -147,13 +114,22 @@ text-align:center;
 
 .hero-logo{
 width:220px;
-max-width:90%;
+margin-bottom:18px;
+}
+
+.hero-photo{
+width:165px;
+height:165px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #fff;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 margin-bottom:20px;
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .hero h2{
@@ -163,9 +139,9 @@ margin-bottom:18px;
 }
 
 .hero p{
-max-width:850px;
+max-width:800px;
 margin:auto;
-margin-bottom:28px;
+margin-bottom:25px;
 }
 
 .btn{
@@ -185,6 +161,15 @@ background:#0096c7;
 transform:translateY(-2px);
 }
 
+/* TRUST BAR */
+.trust{
+background:#fff;
+padding:18px;
+text-align:center;
+font-weight:600;
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
 /* SECTION */
 .section{
 padding:65px 20px;
@@ -199,6 +184,12 @@ margin-bottom:30px;
 color:#0d1b2a;
 }
 
+.section p.center{
+max-width:850px;
+margin:auto;
+text-align:center;
+}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -210,8 +201,93 @@ background:#fff;
 padding:24px;
 border-radius:14px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,.12);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#0d1b2a;
+}
+
+/* COUNTERS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat{
+background:#fff;
+padding:25px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.stat h3{
+font-size:34px;
+color:#00b4d8;
+}
+
+/* CONTACT */
+.contact-form{
+max-width:700px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin-bottom:14px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.contact-form textarea{
+min-height:140px;
+resize:vertical;
+}
+
+/* FLOAT ICONS */
+.float-icons{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
+}
+
+.float-icons a{
+width:52px;
+height:52px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+color:#fff;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 6px 15px rgba(0,0,0,.18);
+}
+
+.whatsapp{background:#25D366;}
+.email{background:#0077b5;}
+.linkedin{background:#0A66C2;}
+
+/* STICKY MOBILE CTA */
+.mobile-cta{
+display:none;
+}
+
+/* FOOTER */
 footer{
 background:#0d1b2a;
 color:#fff;
@@ -255,6 +331,49 @@ text-align:center;
 margin-top:10px;
 justify-content:center;
 }
+
+.hero{
+padding:60px 15px;
+}
+
+.hero-logo{
+width:170px;
+}
+
+.hero-photo{
+width:135px;
+height:135px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero h2{
+font-size:18px;
+}
+
+.section{
+padding:45px 15px;
+}
+
+.mobile-cta{
+display:block;
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#00b4d8;
+text-align:center;
+padding:12px;
+z-index:999;
+}
+
+.mobile-cta a{
+color:#fff;
+font-weight:700;
+text-decoration:none;
+}
 }
 
 body[dir="rtl"]{
@@ -262,6 +381,7 @@ direction:rtl;
 text-align:right;
 }
 </style>
+
 </head>
 
 <body>
@@ -280,16 +400,22 @@ text-align:right;
 <div class="header-right">
 
 <nav id="navMenu">
-
-<a href="index.html" class="home-btn"><i class="fas fa-home"></i> Home</a>
+<a href="index.html"><i class="fas fa-home"></i> Home</a>
 <a href="#about">About</a>
 <a href="services.html">Services</a>
 <a href="case-studies.html">Results</a>
 <a href="cv.html">Profile</a>
 <a href="germany.html">Germany / EU</a>
 <a href="#contact">Contact</a>
-
 </nav>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
+
+</div>
 
 <div class="lang-switch">
 <button onclick="setLang('en')">EN</button>
@@ -304,14 +430,15 @@ text-align:right;
 <!-- HERO -->
 <section class="hero">
 
-<img src="naveenindia_logo.png" class="hero-logo">
+<img src="naveenindia_logo.png" class="hero-logo" alt="Logo">
+<img src="profile.jpg" class="hero-photo" alt="Naveen">
 
 <h1>Secure. Scale. Succeed.</h1>
 
 <h2>Enterprise IT Leadership | Cybersecurity | Infrastructure</h2>
 
 <p>
-23+ years helping healthcare centers, multi-branch companies and enterprises reduce downtime, improve security, modernize infrastructure, and build resilient business technology systems.
+23+ years helping healthcare centers, multi-branch companies and enterprises reduce downtime, improve security and modernize IT operations.
 </p>
 
 <a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Book Free Strategy Call</a>
@@ -320,25 +447,154 @@ text-align:right;
 
 </section>
 
+<div class="trust">
+Trusted by Healthcare, Finance, Enterprise & GCC Organizations
+</div>
+
+<!-- STATS -->
+<section class="section">
+
+<h2>Results That Matter</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>23+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h3>30+</h3>
+<p>Projects Delivered</p>
+</div>
+
+<div class="stat">
+<h3>17+</h3>
+<p>Branch Networks Managed</p>
+</div>
+
+<div class="stat">
+<h3>99.9%</h3>
+<p>Business Uptime Focus</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
 <section class="section" id="about">
 
 <h2>About Me</h2>
 
+<p class="center">
+Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with 23+ years hands-on experience and 16+ years international leadership across Qatar and GCC.
+</p>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+
+<h2>Core Services</h2>
+
+<div class="cards">
+
 <div class="card">
-Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with over 23 years of hands-on experience and more than 16 years in international IT management.
+<h3>Cybersecurity</h3>
+<p>Palo Alto, FortiGate, SonicWall, EDR/XDR, Risk Reduction.</p>
+</div>
+
+<div class="card">
+<h3>Infrastructure</h3>
+<p>Servers, Virtualization, Branch Networks, High Availability.</p>
+</div>
+
+<div class="card">
+<h3>Healthcare IT</h3>
+<p>Clinical Systems, HMS, Insurance Integration, Secure Operations.</p>
+</div>
+
+<div class="card">
+<h3>Cloud & Microsoft 365</h3>
+<p>Azure, Collaboration, Email Security, Hybrid Cloud.</p>
+</div>
+
+<div class="card">
+<h3>Backup & DR</h3>
+<p>Business Continuity, Recovery Readiness, Data Protection.</p>
+</div>
+
+<div class="card">
+<h3>IT Leadership</h3>
+<p>Vendor Governance, SLA, Policy, IT Transformation.</p>
+</div>
+
 </div>
 
 </section>
 
+<!-- WHY CHOOSE -->
+<section class="section">
+
+<h2>Why Work With Me</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Executive Thinking</h3>
+<p>Technology aligned with business growth.</p>
+</div>
+
+<div class="card">
+<h3>Hands-On Delivery</h3>
+<p>Strategy + execution from one expert source.</p>
+</div>
+
+<div class="card">
+<h3>Trusted Experience</h3>
+<p>Healthcare, finance, enterprise and regulated sectors.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
 <section class="section" id="contact">
 
 <h2>Need Reliable IT Leadership?</h2>
 
-<div class="card">
-Let’s discuss how to secure your systems, reduce downtime and modernize your business technology.
-</div>
+<p class="center">
+Let’s discuss how to secure your systems, reduce downtime and modernize your business IT.
+</p>
+
+<p style="text-align:center;margin-top:20px;">
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Schedule Consultation</a>
+</p>
 
 </section>
+
+<!-- FLOAT ICONS -->
+<div class="float-icons">
+
+<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="mailto:naveenprasad.naveen@gmail.com" class="email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/naveen-prasad-5967874" class="linkedin" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+</div>
+
+<div class="mobile-cta">
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank">Book Free Call</a>
+</div>
 
 <footer>
 <p>© 2026 Naveen Prasad Kuniyil</p>
@@ -350,7 +606,7 @@ Let’s discuss how to secure your systems, reduce downtime and modernize your b
 <script>
 function googleTranslateElementInit(){
 new google.translate.TranslateElement(
-{pageLanguage:'en', autoDisplay:false},
+{pageLanguage:'en'},
 'google_translate_element'
 );
 }

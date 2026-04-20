@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Naveen Prasad Kuniyil | IT Consultant | Cybersecurity | Healthcare IT</title>
 
-<meta name="description" content="IT Consultant with 23+ years experience in Cybersecurity, Healthcare IT, Infrastructure, and Digital Transformation.">
+<meta name="description" content="23+ years experienced IT Consultant specializing in Cybersecurity, Healthcare IT, Infrastructure, Cloud, and Enterprise Solutions across Qatar, GCC and Europe.">
 
-<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, Palo Alto, SonicWall, IT Infrastructure, Germany IT Jobs">
+<meta name="keywords" content="IT Consultant Qatar, Cybersecurity Consultant, Healthcare IT, IT Infrastructure, Cloud Consultant, IT Manager Qatar, GCC IT Expert">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -22,12 +21,18 @@ box-sizing:border-box;
 font-family:Poppins,sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#f5f7fb;
 color:#222;
 line-height:1.6;
+overflow-x:hidden;
 }
 
+/* HEADER */
 header{
 background:#0d1b2a;
 color:#fff;
@@ -36,7 +41,10 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
-gap:15px;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
 .brand{
@@ -45,13 +53,10 @@ align-items:center;
 gap:12px;
 font-size:24px;
 font-weight:700;
-white-space:nowrap;
 }
 
 .brand img{
 height:42px;
-width:auto;
-object-fit:contain;
 }
 
 .header-right{
@@ -63,16 +68,15 @@ margin-left:auto;
 
 nav{
 display:flex;
-align-items:center;
 gap:18px;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
-font-weight:500;
 font-size:15px;
-transition:0.3s;
+font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
@@ -94,48 +98,48 @@ cursor:pointer;
 font-size:13px;
 }
 
-.lang-switch button:hover{
-background:#fff;
-color:#0d1b2a;
-}
-
 .menu-toggle{
 display:none;
 font-size:26px;
 cursor:pointer;
-color:#fff;
 }
 
 /* HERO */
 .hero{
 background:linear-gradient(135deg,#1b263b,#415a77);
 color:#fff;
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 }
 
-.hero img{
-width:240px;
-max-width:92%;
-height:auto;
-object-fit:contain;
-margin-bottom:25px;
-filter:drop-shadow(0 12px 24px rgba(0,0,0,0.25));
+.hero-logo{
+width:220px;
+margin-bottom:18px;
+}
+
+.hero-photo{
+width:165px;
+height:165px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #fff;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:38px;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .hero h2{
 font-size:22px;
 font-weight:400;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .hero p{
-max-width:760px;
+max-width:800px;
 margin:auto;
 margin-bottom:25px;
 }
@@ -149,7 +153,7 @@ color:#fff;
 text-decoration:none;
 border-radius:30px;
 font-weight:600;
-transition:0.3s;
+transition:.3s;
 }
 
 .btn:hover{
@@ -157,8 +161,18 @@ background:#0096c7;
 transform:translateY(-2px);
 }
 
+/* TRUST BAR */
+.trust{
+background:#fff;
+padding:18px;
+text-align:center;
+font-weight:600;
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+/* SECTION */
 .section{
-padding:60px 20px;
+padding:65px 20px;
 max-width:1150px;
 margin:auto;
 }
@@ -171,7 +185,7 @@ color:#0d1b2a;
 }
 
 .section p.center{
-max-width:800px;
+max-width:850px;
 margin:auto;
 text-align:center;
 }
@@ -186,13 +200,13 @@ gap:22px;
 background:#fff;
 padding:24px;
 border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.3s;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
 .card:hover{
 transform:translateY(-6px);
-box-shadow:0 14px 30px rgba(0,0,0,0.12);
+box-shadow:0 14px 30px rgba(0,0,0,.12);
 }
 
 .card h3{
@@ -200,6 +214,27 @@ margin-bottom:10px;
 color:#0d1b2a;
 }
 
+/* COUNTERS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat{
+background:#fff;
+padding:25px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.stat h3{
+font-size:34px;
+color:#00b4d8;
+}
+
+/* CONTACT */
 .contact-form{
 max-width:700px;
 margin:auto;
@@ -212,7 +247,6 @@ padding:12px;
 margin-bottom:14px;
 border:1px solid #ccc;
 border-radius:8px;
-font-size:15px;
 }
 
 .contact-form textarea{
@@ -220,11 +254,7 @@ min-height:140px;
 resize:vertical;
 }
 
-.contact-form button{
-border:none;
-cursor:pointer;
-}
-
+/* FLOAT ICONS */
 .float-icons{
 position:fixed;
 bottom:20px;
@@ -245,13 +275,19 @@ border-radius:50%;
 color:#fff;
 font-size:20px;
 text-decoration:none;
-box-shadow:0 6px 15px rgba(0,0,0,0.18);
+box-shadow:0 6px 15px rgba(0,0,0,.18);
 }
 
 .whatsapp{background:#25D366;}
 .email{background:#0077b5;}
 .linkedin{background:#0A66C2;}
 
+/* STICKY MOBILE CTA */
+.mobile-cta{
+display:none;
+}
+
+/* FOOTER */
 footer{
 background:#0d1b2a;
 color:#fff;
@@ -260,6 +296,7 @@ padding:24px 20px;
 margin-top:40px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
 
 .menu-toggle{
@@ -277,8 +314,8 @@ display:none;
 flex-direction:column;
 width:100%;
 background:#0d1b2a;
-padding:10px 0;
 margin-top:10px;
+padding:10px 0;
 }
 
 nav.active{
@@ -288,7 +325,6 @@ display:flex;
 nav a{
 padding:10px;
 text-align:center;
-width:100%;
 }
 
 .lang-switch{
@@ -300,8 +336,13 @@ justify-content:center;
 padding:60px 15px;
 }
 
-.hero img{
-width:180px;
+.hero-logo{
+width:170px;
+}
+
+.hero-photo{
+width:135px;
+height:135px;
 }
 
 .hero h1{
@@ -316,17 +357,22 @@ font-size:18px;
 padding:45px 15px;
 }
 
-.float-icons{
-bottom:15px;
-right:15px;
+.mobile-cta{
+display:block;
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#00b4d8;
+text-align:center;
+padding:12px;
+z-index:999;
 }
 
-.brand{
-font-size:20px;
-}
-
-.brand img{
-height:34px;
+.mobile-cta a{
+color:#fff;
+font-weight:700;
+text-decoration:none;
 }
 }
 
@@ -343,7 +389,7 @@ text-align:right;
 <header>
 
 <div class="brand">
-<img src="naveenindia_logo.png" alt="Naveen India Logo">
+<img src="naveenindia_logo.png" alt="Logo">
 <span>Naveen Prasad Kuniyil</span>
 </div>
 
@@ -354,10 +400,10 @@ text-align:right;
 <div class="header-right">
 
 <nav id="navMenu">
-<a href="index.html">Home</a>
 <a href="#about">About</a>
 <a href="services.html">Services</a>
-<a href="case-studies.html">Case Studies</a>
+<a href="case-studies.html">Results</a>
+<a href="cv.html">Profile</a>
 <a href="germany.html">Germany / EU</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -375,44 +421,52 @@ text-align:right;
 <!-- HERO -->
 <section class="hero">
 
-<img src="naveenindia_logo.png" alt="Naveen India Logo">
+<img src="naveenindia_logo.png" class="hero-logo" alt="Logo">
+<img src="profile.jpg" class="hero-photo" alt="Naveen">
 
-<h1>Fix IT Issues. Secure Your Business.</h1>
+<h1>Secure. Scale. Succeed.</h1>
 
-<h2>Scale Without Downtime.</h2>
+<h2>Enterprise IT Leadership | Cybersecurity | Infrastructure</h2>
 
 <p>
-Helping healthcare centers and businesses eliminate IT problems,
-improve security, and build reliable infrastructure with 23+ years
-of proven experience.
+23+ years helping healthcare centers, multi-branch companies and enterprises reduce downtime, improve security and modernize IT operations.
 </p>
 
-<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Schedule Strategy Call</a>
-<a href="cv.html" class="btn">View Professional Profile</a>
-<a href="germany.html" class="btn">Explore EU Opportunities</a>
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Book Free Strategy Call</a>
+<a href="cv.html" class="btn">View Executive Profile</a>
+<a href="services.html" class="btn">Explore Services</a>
 
 </section>
 
-<!-- WHO I HELP -->
+<div class="trust">
+Trusted by Healthcare, Finance, Enterprise & GCC Organizations
+</div>
+
+<!-- STATS -->
 <section class="section">
 
-<h2>Who I Help</h2>
+<h2>Results That Matter</h2>
 
-<div class="cards">
+<div class="stats">
 
-<div class="card">
-<h3>Healthcare Centers</h3>
-<p>Clinics, hospitals, and medical groups needing secure and stable IT systems.</p>
+<div class="stat">
+<h3>23+</h3>
+<p>Years Experience</p>
 </div>
 
-<div class="card">
-<h3>Multi-Branch Businesses</h3>
-<p>Organizations facing downtime, branch connectivity issues, and poor central control.</p>
+<div class="stat">
+<h3>30+</h3>
+<p>Projects Delivered</p>
 </div>
 
-<div class="card">
-<h3>Growing Companies</h3>
-<p>Businesses needing scalable infrastructure, cloud migration, and cybersecurity.</p>
+<div class="stat">
+<h3>17+</h3>
+<p>Branch Networks Managed</p>
+</div>
+
+<div class="stat">
+<h3>99.9%</h3>
+<p>Business Uptime Focus</p>
 </div>
 
 </div>
@@ -425,36 +479,8 @@ of proven experience.
 <h2>About Me</h2>
 
 <p class="center">
-IT Manager with over 23 years of experience including 16+ years in international IT management.
-Currently leading IT operations at Al-Hayat Medical Center Group, Qatar, managing infrastructure,
-cybersecurity, cloud systems, and digital transformation across multiple branches.
+Founder of NAVEENINDIA IT Consulting. Senior IT Infrastructure & Cyber Security Professional with 23+ years hands-on experience and 16+ years international leadership across Qatar and GCC.
 </p>
-
-</section>
-
-<!-- WHY CHOOSE -->
-<section class="section">
-
-<h2>Why Choose Me</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>23+ Years Experience</h3>
-<p>Hands-on leadership across healthcare, enterprise IT, and infrastructure.</p>
-</div>
-
-<div class="card">
-<h3>30+ Projects Delivered</h3>
-<p>Successful implementations, upgrades, migrations, and security improvements.</p>
-</div>
-
-<div class="card">
-<h3>International Exposure</h3>
-<p>Extensive GCC experience with multicultural teams and business environments.</p>
-</div>
-
-</div>
 
 </section>
 
@@ -466,49 +492,59 @@ cybersecurity, cloud systems, and digital transformation across multiple branche
 <div class="cards">
 
 <div class="card">
-<h3>Cybersecurity Consulting</h3>
-<p>Palo Alto, FortiGate, SonicWall, endpoint protection, policy hardening, risk reduction.</p>
+<h3>Cybersecurity</h3>
+<p>Palo Alto, FortiGate, SonicWall, EDR/XDR, Risk Reduction.</p>
 </div>
 
 <div class="card">
-<h3>Healthcare IT Solutions</h3>
-<p>HMS systems, insurance integration, secure clinical systems, uptime-focused operations.</p>
+<h3>Infrastructure</h3>
+<p>Servers, Virtualization, Branch Networks, High Availability.</p>
 </div>
 
 <div class="card">
-<h3>Infrastructure & Cloud</h3>
-<p>Servers, virtualization, Microsoft ecosystem, Azure, branch connectivity, resilience.</p>
+<h3>Healthcare IT</h3>
+<p>Clinical Systems, HMS, Insurance Integration, Secure Operations.</p>
+</div>
+
+<div class="card">
+<h3>Cloud & Microsoft 365</h3>
+<p>Azure, Collaboration, Email Security, Hybrid Cloud.</p>
 </div>
 
 <div class="card">
 <h3>Backup & DR</h3>
-<p>Business continuity planning, backup systems, recovery readiness, zero-data-loss strategy.</p>
+<p>Business Continuity, Recovery Readiness, Data Protection.</p>
+</div>
+
+<div class="card">
+<h3>IT Leadership</h3>
+<p>Vendor Governance, SLA, Policy, IT Transformation.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CASE STUDIES -->
+<!-- WHY CHOOSE -->
 <section class="section">
 
-<h2>Case Studies</h2>
+<h2>Why Work With Me</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>17-Branch Healthcare Network</h3>
-<p>Stabilized infrastructure and reduced operational downtime across multiple branches.</p>
+<h3>Executive Thinking</h3>
+<p>Technology aligned with business growth.</p>
 </div>
 
 <div class="card">
-<h3>Cybersecurity Upgrade</h3>
-<p>Implemented enterprise security stack reducing exposure and improving control.</p>
+<h3>Hands-On Delivery</h3>
+<p>Strategy + execution from one expert source.</p>
 </div>
 
 <div class="card">
-<h3>Backup Modernization</h3>
-<p>Centralized backup and recovery systems for reliable business continuity.</p>
+<h3>Trusted Experience</h3>
+<p>Healthcare, finance, enterprise and regulated sectors.</p>
 </div>
 
 </div>
@@ -516,43 +552,24 @@ cybersecurity, cloud systems, and digital transformation across multiple branche
 </section>
 
 <!-- CTA -->
-<section class="section">
+<section class="section" id="contact">
 
-<h2>Need Reliable IT Support?</h2>
+<h2>Need Reliable IT Leadership?</h2>
 
 <p class="center">
-Let’s identify your IT problems and solve them with a secure,
-structured, and scalable approach.
+Let’s discuss how to secure your systems, reduce downtime and modernize your business IT.
 </p>
 
 <p style="text-align:center;margin-top:20px;">
-<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Get IT Assessment</a>
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank" class="btn">Schedule Consultation</a>
 </p>
-
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact-form">
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Tell me about your requirement"></textarea>
-<button type="submit" class="btn">Send Message</button>
-</form>
-
-</div>
 
 </section>
 
 <!-- FLOAT ICONS -->
 <div class="float-icons">
 
-<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" target="_blank" class="whatsapp">
+<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" class="whatsapp" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -560,15 +577,19 @@ structured, and scalable approach.
 <i class="fas fa-envelope"></i>
 </a>
 
-<a href="https://www.linkedin.com/in/naveen-prasad-5967874" target="_blank" class="linkedin">
+<a href="https://www.linkedin.com/in/naveen-prasad-5967874" class="linkedin" target="_blank">
 <i class="fab fa-linkedin-in"></i>
 </a>
 
 </div>
 
+<div class="mobile-cta">
+<a href="https://calendly.com/naveenprasad-naveen/30min" target="_blank">Book Free Call</a>
+</div>
+
 <footer>
 <p>© 2026 Naveen Prasad Kuniyil</p>
-<p>Healthcare IT | Cybersecurity | Infrastructure | Qatar | GCC | Europe</p>
+<p>Cybersecurity | Infrastructure | Healthcare IT | Qatar | GCC | Europe</p>
 </footer>
 
 <div id="google_translate_element" style="display:none;"></div>

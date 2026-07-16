@@ -3,326 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Privacy Policy | Naveen Prasad Kuniyil</title>
-<meta name="description" content="Privacy Policy for Naveen Prasad Kuniyil IT Consulting website.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Privacy policy for naveenindia.com.">
+<meta name="keywords" content="privacy policy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:#f5f7fb;
-color:#222;
-line-height:1.6;
-overflow-x:hidden;
-top:0 !important;
-}
-
-/* GOOGLE TRANSLATE HIDE FIX */
-.goog-te-banner-frame,
-.skiptranslate,
-.goog-te-gadget,
-.goog-te-combo,
-.goog-logo-link,
-.goog-te-balloon-frame,
-#google_translate_element{
-display:none !important;
-}
-
-/* HEADER */
-header{
-background:#0d1b2a;
-color:#fff;
-padding:18px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:24px;
-font-weight:700;
-white-space:nowrap;
-}
-
-.brand img{
-height:42px;
-}
-
-.header-right{
-display:flex;
-align-items:center;
-gap:20px;
-margin-left:auto;
-}
-
-nav{
-display:flex;
-align-items:center;
-gap:18px;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:#00b4d8;
-}
-
-.lang-switch{
-display:flex;
-gap:8px;
-}
-
-.lang-switch button{
-background:transparent;
-border:1px solid #fff;
-color:#fff;
-padding:6px 10px;
-border-radius:22px;
-cursor:pointer;
-font-size:13px;
-}
-
-.lang-switch button:hover{
-background:#fff;
-color:#0d1b2a;
-}
-
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-color:#fff;
-}
-
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#1b263b,#415a77);
-color:#fff;
-text-align:center;
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-/* CONTENT */
-.section{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-}
-
-.card{
-background:#fff;
-padding:35px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.card h2{
-margin-bottom:18px;
-color:#0d1b2a;
-}
-
-.card p{
-margin-bottom:16px;
-line-height:1.8;
-}
-
-/* FOOTER */
-footer{
-background:#0d1b2a;
-color:#fff;
-text-align:center;
-padding:25px 20px;
-margin-top:50px;
-}
-
-footer a{
-color:#fff;
-text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.menu-toggle{
-display:block;
-margin-left:auto;
-}
-
-.header-right{
-width:100%;
-display:block;
-}
-
-nav{
-display:none;
-flex-direction:column;
-width:100%;
-background:#0d1b2a;
-margin-top:10px;
-padding:10px 0;
-}
-
-nav.active{
-display:flex;
-}
-
-nav a{
-padding:10px;
-text-align:center;
-width:100%;
-}
-
-.lang-switch{
-margin-top:10px;
-justify-content:center;
-}
-
-.brand{
-font-size:18px;
-}
-
-.hero h1{
-font-size:30px;
-}
-
-.section{
-padding:40px 15px;
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-
-<div class="brand">
-<img src="naveenindia_logo.png" alt="Logo">
-<span>Naveen Prasad Kuniyil</span>
-</div>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fas fa-bars"></i>
-</div>
-
-<div class="header-right">
-
-<nav id="navMenu">
-<a href="index.html"><i class="fas fa-home"></i> Home</a>
-<a href="index.html#about">About</a>
-<a href="services.html">Services</a>
-<a href="case-studies.html">Results</a>
+<header class="site">
+<div class="nav">
+<a class="brand" href="index.html"><img src="naveenindia_logo.png" alt="Naveen India logo"> Naveen Prasad Kuniyil</a>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+<nav class="nav-links" id="navMenu">
+<a href="index.html">Home</a>
 <a href="cv.html">Profile</a>
-<a href="germany.html">Germany / EU</a>
-<a href="index.html#contact">Contact</a>
+<a href="services.html">Services</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="germany.html">Europe / Remote</a>
+<a href="contact.html">Contact</a>
 </nav>
-
 <div class="lang-switch">
 <button onclick="setLang('en')">EN</button>
 <button onclick="setLang('de')">DE</button>
 <button onclick="setLang('ar')">AR</button>
 </div>
-
 </div>
-
 </header>
 
-<section class="hero">
+<div class="hero">
+<div class="hero-inner">
+<span class="eyebrow">Legal</span>
 <h1>Privacy Policy</h1>
-<p>Your trust and privacy matter to us.</p>
-</section>
-
-<section class="section">
-
-<div class="card">
-
-<h2>Privacy Commitment</h2>
-
-<p>
-We respect your privacy. Any information submitted through this website, contact forms, email, or direct communication will only be used for responding to your inquiries and providing requested services.
-</p>
-
-<p>
-We do not sell, rent, trade, or share your personal data with third parties for marketing purposes.
-</p>
-
-<p>
-Reasonable steps are taken to protect any information voluntarily shared with us.
-</p>
-
-<p>
-By using this website, you agree to this privacy policy.
-</p>
-
-<p>
-If you have any questions regarding privacy matters, please contact us directly.
-</p>
-
+<p class="lead">Your trust and privacy matter.</p>
 </div>
-
+</div>
+<main>
+<section>
+<div class="card" style="max-width:760px">
+<h3>Privacy commitment</h3>
+<p>We respect your privacy. Any information submitted through this website, contact forms, email, or direct communication will only be used for responding to your inquiries and providing requested services.</p><br>
+<p>We do not sell, rent, trade, or share your personal data with third parties for marketing purposes.</p><br>
+<p>Reasonable steps are taken to protect any information voluntarily shared with us.</p><br>
+<p>By using this website, you agree to this privacy policy.</p><br>
+<p>If you have any questions regarding privacy matters, please contact us directly.</p>
+</div>
 </section>
-
-<footer>
-<p>© 2026 Naveen Prasad Kuniyil</p>
-<p>Cybersecurity | Infrastructure | Healthcare IT | Qatar | GCC | Europe</p>
-
-<p style="margin-top:10px;">
-<a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a>
-</p>
+</main>
+<div class="float-icons">
+<a href="https://wa.me/97433990879?text=Hello%20I%20need%20IT%20consultation" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="mailto:naveenprasad.naveen@gmail.com" class="email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/naveen-prasad-kuniyil" target="_blank" rel="noopener" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+<footer class="site">
+<p>© 2026 Naveen Prasad Kuniyil · Doha, Qatar</p>
+<p class="foot-tag">SECURE · SCALE · SUCCEED</p>
+<p style="margin-top:10px;"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
 </footer>
 
-<div id="google_translate_element"></div>
-
+<div id="google_translate_element" style="display:none;"></div>
 <script>
-function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("active");
-}
-
 function googleTranslateElementInit(){
-new google.translate.TranslateElement(
-{pageLanguage:'en'},
-'google_translate_element'
-);
+new google.translate.TranslateElement({pageLanguage:'en'},'google_translate_element');
 }
-
 function setLang(lang){
 const interval=setInterval(()=>{
 const select=document.querySelector(".goog-te-combo");
-if(select){
-select.value=lang;
-select.dispatchEvent(new Event("change"));
-clearInterval(interval);
-}
+if(select){select.value=lang;select.dispatchEvent(new Event("change"));clearInterval(interval);}
 },300);
+document.body.dir=(lang==="ar")?"rtl":"ltr";
 }
+function toggleMenu(){document.getElementById("navMenu").classList.toggle("open");}
 </script>
-
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>

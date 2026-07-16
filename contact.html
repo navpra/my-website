@@ -334,6 +334,7 @@ text-align:right;
 <nav id="navMenu">
 <a href="index.html"><i class="fas fa-home"></i> Home</a>
 <a href="index.html#about">About</a>
+<a href="cv.html">Profile</a>
 <a href="services.html">Services</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="germany.html">Germany / EU</a>
@@ -388,11 +389,11 @@ and technology solutions.
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<a href="mailto:nav_pra@outlook.com" class="email">
+<a href="mailto:naveenprasad.naveen@gmail.com" class="email">
 <i class="fas fa-envelope"></i>
 </a>
 
-<a href="https://www.linkedin.com/in/naveen-prasad-kuniyil-5967874" target="_blank" class="linkedin">
+<a href="https://www.linkedin.com/in/naveen-prasad-5967874" target="_blank" class="linkedin">
 <i class="fab fa-linkedin-in"></i>
 </a>
 
@@ -439,11 +440,15 @@ document.getElementById("navMenu").classList.toggle("active");
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", async function(e){
+document.getElementById("contactForm").addEventListener("submit", function(e){
 e.preventDefault();
-
-document.getElementById("status").innerText="Message sent successfully!";
-this.reset();
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const message = document.getElementById("message").value;
+const subject = encodeURIComponent("Website inquiry from " + name);
+const body = encodeURIComponent(message + "\n\nFrom: " + name + " (" + email + ")");
+window.location.href = "mailto:naveenprasad.naveen@gmail.com?subject=" + subject + "&body=" + body;
+document.getElementById("status").innerText = "Opening your email app to send the message…";
 });
 </script>
 
